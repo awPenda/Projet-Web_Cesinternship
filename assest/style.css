@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  background-color: #d8dddd;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin-top: 10%;
+  margin: 0 auto;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#main_div{
+    padding-top: 10%;
+}
+#sign_in_btn{
+    background-color: #058995;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #0cb8c4;
+    box-shadow: 0 0 8px #0cb8c47c;
+  }
+
+  a{
+      color: #0cb8c4 ;
+  }
+ #Title_cesintership{
+    color: #0cb8c4 ;
+    font-family:Arial, Helvetica, sans-serif;
+ }
