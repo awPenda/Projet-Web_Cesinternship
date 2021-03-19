@@ -24,7 +24,7 @@
      <title>Create</title>
 </head>
 
-<body class="raw">
+<body class="">
 
     <nav class="navbar navbar-dark bg-dark">
         <h1 id="Title_cesinternship"><img src="../pictures/CesinternshipLOGO.png" alt="Cesinternship" width="250"></h1>
@@ -208,13 +208,230 @@
 
 
 
+                    <!--Valeurs Compagny-->
+                    <div id="compagny_attributes">
+                        <div class="flex-column">
+                            <div class="col-md-12 mb-3 text-center">
+                                <label class="text-muted" for="activity_compagny">activity area</label>
+                                <select class="form-select" id="activity_compagny" required="" >
+                                    <option value="">Generalist</option>
+                                    <option>Computer Science</option>
+                                    <option>construction industry</option>
+                                    <option>onboard systems</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="text" class="form-control" id="name_compagny" placeholder="Compagny name" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid name is required.
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="email" class="form-control" id="email_compagny" placeholder="email" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid email is required.
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="zip_code" placeholder="Zip Code" required="">
+                                    <div class="invalid-feedback">
+                                        Un code postal valide est requis.
+                                    </div>
+                                    <div class="input-group-append">
+                                      <input type="button" class="btn btn-secondary"  id='btn_zip_code' value='OK'>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input class="form-control" type="text" placeholder="Town" id="town" readonly>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="nb_cesi_internship" placeholder="Number of cesi interns" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid number is required.
+                                </div>
+                            </div>
+                        </div>
 
+                        <hr class="mb-4">
+                        <!--Bouton valider commande-->
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
+                     
+                    </div>
+
+
+
+
+
+                    <!--Valeurs stage-->
+                    <div id="internship_attributes">
+                        <div class="flex-column">
+                            <div class="col-md-12 mb-3 ">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="status_internship" checked>
+                                    <label class="form-check-label" for="status_internship">Internship available</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-3 text-center">
+                                <label class="text-muted" for="student_level_internship">Student level</label>
+                                <select class="form-select" id="student_level_internship" required="" >
+                                    <option value="">No level required</option>
+                                    <option>Second year</option>
+                                    <option>Third year</option>
+                                    <option>Fourth year</option>
+                                    <option>Fifth year</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="nb_max_student_internship" placeholder="Number of available internship" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid number is required.
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <div id="div_skills">
+                                    <label class="text-muted" for="name_first_skill_internship">First Skill</label>
+                                    <select class="form-select" id="name_first_skill_internship" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_second_skill_internship">Second Skill</label>
+                                    <select class="form-select" id="name_second_skill_internship" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_third_skill_internship">Third Skill</label>
+                                    <select class="form-select" id="name_third_skill_internship" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row" id="div_date_internship">
+                                <div class="col-md-6 col-sm-6 mb-3">
+                                    <label class="text-muted" for="period_internship_begining">Begining</label>
+                                    <input type="date" class="form-control" id="period_internship_begining" placeholder="period internship begining" value="" required="">
+                                    <div class="invalid-feedback">
+                                        A valid date is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 mb-3">
+                                    <label class="text-muted" for="period_internship_ending">Ending</label>
+                                    <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending" value="" required="">
+                                    <div class="invalid-feedback">
+                                        A valid date is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" placeholder="Base pay" step="0.01" min="546.00" id="base_pay_internship">
+                                <div class="invalid-feedback">
+                                    A valid pay is required.
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="id_compagny_internship" placeholder="Id of your compagny" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid number is required.
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="text-muted" for="date_publication_internship">Publication date</label>
+                                <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid date is required.
+                                </div>
+                            </div>
+
+                           
+                        </div>
+
+                        <hr class="mb-4">
+                        <!--Bouton valider commande-->
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
+                     
+                    </div>
 
 
 
                     
                     
-                    <button class="btn btn-sm btn-block" type="submit" id='reset' >Réinitialiser</button>
+                    <button class="btn btn-sm btn-block" type="reset" id='reset' >Reset</button>
                 </form>
 
             </div>

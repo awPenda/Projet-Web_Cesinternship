@@ -36,6 +36,15 @@ body {
       color: #0cb8c4 ;
   }
 
+#div_date_internship{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
   
 #user_attributes{
   display: none;
@@ -52,3 +61,11 @@ body {
 #admin_attributes{
   display: none;
 }
+#compagny_attributes{
+  display: none;
+}
+#internship_attributes{
+  display: none;
+}
+
+
