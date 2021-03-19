@@ -35,4 +35,20 @@ body {
   a{
       color: #0cb8c4 ;
   }
- 
+
+  
+#user_attributes{
+  display: none;
+}
+#student_attributes{
+  display: none;
+}
+#delegate_attributes{
+  display: none;
+}
+#pilot_attributes{
+  display: none;
+}
+#admin_attributes{
+  display: none;
+}
