@@ -26,20 +26,10 @@
 </head>
 
 <body class="">
-    <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <h1 id="Title_cesinternship"><img src="../pictures/CesinternshipLOGO.png" alt="Cesinternship" width="250"></h1>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="navbar-collapse collapse" id="navbarsExample01" >
-                <p class="text-center" style="color: white;">
-                Find your intership with Cesinternship !
-                </p>
-            </div>
-        </nav>
-    </header>
+    
+<?php
+include_once 'header.php'
+?>
 
     <div class="container col-md-8 col-lg-4">
 
@@ -441,14 +431,9 @@
 
         <hr class="mb-4">
 
-        <footer class="my-5 text-muted text-center text-small">
-            <p class="mb-1">© 2021 Cesinternship</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-        </footer>
+        <?php
+          include_once 'footer.php'
+        ?>
 
       </div>
 
