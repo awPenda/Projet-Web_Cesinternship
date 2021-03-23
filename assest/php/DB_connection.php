@@ -8,9 +8,9 @@ try {
         //print_r($row);
         echo "<br>";
         $id_locality = "{$row['id_locality']}";
-        $zipcode = "{$row['zip_code']}";
+        $zip_code = "{$row['zip_code']}";
         $city_name = "{$row['city_name']}";
-        echo "City ID: $id_locality, Zip Code: $zipcode, City Name: $city_name";
+        echo "City ID: $id_locality, Zip Code: $zip_code, City Name: $city_name";
         echo "<br>";
     }
     $dbh = null;
