@@ -186,6 +186,12 @@
                     <!--Valeurs pour les Pilotes -->
                     <div id="pilot_attributes">
                         <div class="flex-column">
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="id_pilot" placeholder="Id pilot" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid number is required.
+                                </div>
+                            </div>
                             <div class="text-center">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_teacher">
@@ -216,11 +222,18 @@
                      <!--Valeurs pour les Admin -->
                      <div id="admin_attributes">
                         <div class="col-md-12 mb-3">
+                            <input type="number" class="form-control" id="id_admin" placeholder="Id admin" value="" required="">
+                            <div class="invalid-feedback">
+                                A valid number is required.
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
                             <label class="text-muted" for="hiring_date">Hiring date</label>
                             <input type="date" class="form-control" id="hiring_date" required="">
                             <div class="invalid-feedback">
                                 A valid date is required.
                             </div>
+
                         </div>
                         
                         <hr class="mb-4">
