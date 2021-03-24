@@ -111,6 +111,99 @@ include_once 'header.php'
                                     A valid wishlist id is required.
                                 </div>
                             </div>
+
+
+
+                            <div class="col-md-12 mb-3">
+                                <div id="div_skills">
+                                    <label class="text-muted" for="name_first_skill_student">First Skill</label>
+                                    <select class="form-select" id="name_first_skill_student" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_second_skill_student">Second Skill</label>
+                                    <select class="form-select" id="name_second_skill_student" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_third_skill_student">Third Skill</label>
+                                    <select class="form-select" id="name_third_skill_student" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
                         </div>
 
                         <hr class="mb-4">
@@ -139,6 +232,97 @@ include_once 'header.php'
                                     A valid wishlist id is required.
                                 </div>
                             </div>
+
+
+                            <div class="col-md-12 mb-3">
+                                <div id="div_skills">
+                                    <label class="text-muted" for="name_first_skill_delegate">First Skill</label>
+                                    <select class="form-select" id="name_first_skill_delegate" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_second_skill_delegate">Second Skill</label>
+                                    <select class="form-select" id="name_second_skill_delegate" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                    <label class="text-muted" for="name_third_skill_delegate">Third Skill</label>
+                                    <select class="form-select" id="name_third_skill_delegate" required="" >
+                                        <option>Analytical</option>
+                                        <option>Creative Thinking</option>
+                                        <option>Logical Thinking</option>
+                                        <option>Problem Solving</option>
+                                        <option>Administrative</option>
+                                        <option>Business Intelligence</option>
+                                        <option>Customer Service</option>
+                                        <option>Microsoft Office Skills</option>
+                                        <option>Active Listening</option>
+                                        <option>Communication</option>
+                                        <option>Collaboration</option>
+                                        <option>Flexibility</option>
+                                        <option>Interpersonal</option>
+                                        <option>Presentation</option>
+                                        <option>Writing</option>
+                                        <option>Leadership</option>
+                                        <option>Management</option>
+                                        <option>Strategic Planning</option>
+                                        <option>Motivational</option>
+                                        <option>Organizational</option>
+                                        <option>Multitasking</option>
+                                        <option>Time Management</option>
+                                        <option>Persuasive</option>
+                                        <option>Conflict Resolution</option>
+                                        <option>Teamwork</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="text-center">
                                 <input type="checkbox" class="form-check-input" id="delegate_right" checked>
                                 <label class="form-check-label" for="delegate_right">
@@ -203,6 +387,12 @@ include_once 'header.php'
                     <!--Valeurs Compagny-->
                     <div id="compagny_attributes">
                         <div class="flex-column">
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="id_compagny" placeholder="Id Compagny" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid name is required.
+                                </div>
+                            </div>
                             <div class="col-md-12 mb-3 text-center">
                                 <label class="text-muted" for="activity_compagny">activity area</label>
                                 <select class="form-select" id="activity_compagny" required="" >
@@ -409,13 +599,19 @@ include_once 'header.php'
                                     A valid date is required.
                                 </div>
                             </div>
+                            <div class="col-md-12 mb-3">
+                                <textarea class="form-control" id="description_internship" placeholder="Description internship" value="" required=""></textarea>
+                                <div class="invalid-feedback">
+                                    A valid text is required.
+                                </div>
+                            </div>
 
                            
                         </div>
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_internship'>Valider</button>
                      
                     </div>
 
