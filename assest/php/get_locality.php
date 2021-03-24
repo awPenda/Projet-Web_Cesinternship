@@ -14,9 +14,17 @@ class locality extends dbh{
        }
        else {
            echo "no result found";
-           
        }
     }
+    public function add_locality($zip_code, $city_name){
+        $sql = "INSERT INTO locality (zip_code,city_name) VALUES ('$zip_code', '$city_name');";
+        //echo $sql.'<br>';
+        $result = $this->connect()->query($sql);
+    }
+    public function update_locality($id_locality,$zip_code,$city_name ){
+        $sql = "UPDATE locality SET zip_code='$zip_code',city_name='$city_name' WHERE id_locality like '$id_locality'";
+        //echo $sql;
+        $result = $this->connect()->query($sql);
+    }
 }
-
 ?>
