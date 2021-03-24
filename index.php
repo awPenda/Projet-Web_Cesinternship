@@ -44,9 +44,17 @@
             <img class="mb-4" src="./assest/pictures/LOGO.png" alt="LOGO" style="width:50%">
             
             <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
-            <label for="input_email" class="sr-only">Email address</label>
-            <input type="email" id="input_email" class="form-control" placeholder="Email address" required="" autofocus="">
-            <label for="input_password" class="sr-only">Password</label>
+  
+            <select id="select_type" class="form-select form-select mb-3" aria-label="Select type" required="">
+              <option>Admin</option>
+              <option>Pilot</option>
+              <option>Delegate</option>
+              <option>Student</option>
+            </select>
+
+            <!-- <label for="id_user_type" class="sr-only">Email address</label> -->
+            <input type="number" id="id_user_type" class="form-control" placeholder="Id user" required="" autofocus="">
+            <!-- <label for="input_password" class="sr-only">Password</label> -->
             <input type="password" id="input_password" class="form-control" placeholder="Password" required="">
             
             <button id="sign_in_btn" class="btn btn-lg btn-block" type="submit">Sign in</button>

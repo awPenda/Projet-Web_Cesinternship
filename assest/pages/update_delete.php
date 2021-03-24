@@ -222,7 +222,8 @@
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_student'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_student'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_student'>Delete</button>
                     </div>
 
                     <!--Valeurs pour les Délégués-->
@@ -356,7 +357,8 @@
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_delegate'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_delegate'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_delegate'>Delete</button>
                     </div>
 
                     <!--Valeurs pour les Pilotes -->
@@ -392,7 +394,8 @@
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_pilot'>Delete</button>
                     </div>
 
                      <!--Valeurs pour les Admin -->
@@ -414,7 +417,8 @@
                         
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_admin'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_admin'>Delete</button>
                     </div>
 
 
@@ -468,8 +472,8 @@
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
-                     
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_compagny'>Delete</button>
                     </div>
 
 
@@ -647,8 +651,8 @@
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
-                     
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_internship'>Validate</button>
+                        <button class="btn btn-danger btn-lg btn-block" type="submit" id='btn_delete_internship'>Delete</button>
                     </div>
 
 
