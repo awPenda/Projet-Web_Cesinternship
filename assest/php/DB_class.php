@@ -1,5 +1,6 @@
 <?php
 
+//classe dbh permettant la connection a la bdd
 class dbh {
     private $server_name;
     private $username;
