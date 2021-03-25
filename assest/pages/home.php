@@ -31,7 +31,7 @@
         ?>
     
 
-  <div class="">
+  <div class="d-flex justify-content-center">
         <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
 
 
@@ -90,10 +90,10 @@
 
 
         </nav>
-      </div>
+  </div>
        
 
-        <div class="container col-md-10 ">
+    <div class="container col-md-10 ">
   
         <hr class="mb-4">
       
@@ -212,7 +212,7 @@
           include_once 'footer.php'
         ?>
 
-      </div>
+    </div>
 
 
 
