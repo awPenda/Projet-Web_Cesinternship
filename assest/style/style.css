@@ -68,4 +68,9 @@ body {
   display: none;
 }
 
+#search_compagny_div{
+  display: none !important;
+  color: blue !important;
+}
+
 

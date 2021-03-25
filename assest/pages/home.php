@@ -17,8 +17,9 @@
      <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-     <!-- Lien page de style -->
+     <!-- Lien page de style & script-->
      <link rel="stylesheet" href="../style/style.css">
+     <script src="../script/home.js"></script>
      <!-- Titre de la page-->
      <title>Home</title>
 </head>
@@ -30,8 +31,8 @@
         ?>
     
 
-    <div class="container col-md-10 ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded ">
+  <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
 
 
           
@@ -41,9 +42,35 @@
             
 
             <form class="form-inline justify-content-lg-center">
-                <input class="form-control" type="text" placeholder="id" aria-label="id">
-                <input class="form-control" type="text" placeholder="Name" aria-label="name">
-                <select class="custom-select d-block " id="" required="">
+
+              <div id="search_compagny_div" class="form-inline">
+                <input class="form-control col-sm-2" id="search_id_compagny" type="number" placeholder="id" aria-label="id">
+                <input class="form-control col-sm-2" id="search_name_compagny" type="text" placeholder="Name" aria-label="name">
+                <select class="form-select col-sm-3" id="search_activity_compagny" required="" >
+                  <option>activity area</option>
+                  <option>Generalist</option>
+                  <option>Computer Science</option>
+                  <option>construction industry</option>
+                  <option>onboard systems</option>
+                </select>
+                <input class="form-control col-sm-2" id="search_zipcode_compagny" type="text" placeholder="ZipCode" aria-label="zipcode">
+                <input class="form-control col-sm-3" id="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
+              </div>
+
+              <div id="search_internship_div" class="form-inline">
+                <select class="form-select col-sm-4" id="search_student_level_internship" required="" >
+                  <option value="">No level required</option>
+                  <option>Second year</option>
+                  <option>Third year</option>
+                  <option>Fourth year</option>
+                  <option>Fifth year</option>
+                </select>
+                <input class="form-control col-sm-3" id="search_available" type="number" placeholder="available places" aria-label="available places">
+              </div>
+
+
+              <div class="form-inline">
+                <select class="custom-select d-block col-sm" id="search_select_type" required="">
                   <option value="">Compagny</option>
                   <option>Internship</option>
                   <option>Admin</option>
@@ -55,6 +82,7 @@
                   Please provide a valid state.
                 </div>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              </div>
             </form>
 
             
@@ -62,6 +90,10 @@
 
 
         </nav>
+      </div>
+       
+
+        <div class="container col-md-10 ">
   
         <hr class="mb-4">
       
