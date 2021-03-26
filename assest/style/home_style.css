@@ -39,7 +39,15 @@ body {
 #search_compagny_div{
     display: none;
   }
-
-  #search_internship_div{
+#search_internship_div{
+   display: none;
+}
+#search_pilot_div{
     display: none;
-  }
+}
+#search_delegate_div{
+  display: none;
+}
+#search_student_div{
+  display: none;
+}

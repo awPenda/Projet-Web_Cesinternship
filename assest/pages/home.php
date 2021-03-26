@@ -134,16 +134,27 @@
 
                 <div id="search_pilot_div">
                   <div class="form-inline">
-                  <input class="form-control col-sm-6" id="search_name_pilot" type="text" placeholder="Name" aria-label="name">
-                  <input class="form-control col-sm-6" id="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_name_pilot" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
                   </div>
-                  
                 </div>
 
                 <div id="search_delegate_div">
+                  <div class="form-inline">
+                    <input class="form-control col-sm-6" id="search_name_delegate" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_delegate" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_promotion_delegate" type="text" placeholder="Promotion" aria-label="promotion">
+                    <input class="form-control col-sm-6" id="search_centre_locality_delegate" type="text" placeholder="Centre" aria-label="centre">
+                  </div>
                 </div>
 
                 <div id="search_student_div">
+                  <div class="form-inline">
+                    <input class="form-control col-sm-6" id="search_name_student" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_student" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_promotion_student" type="text" placeholder="Promotion" aria-label="promotion">
+                    <input class="form-control col-sm-6" id="search_centre_locality_student" type="text" placeholder="Centre" aria-label="centre">
+                  </div>
                 </div>
 
                 <div class="">
