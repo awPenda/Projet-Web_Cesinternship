@@ -28,7 +28,9 @@
 <body class="">
     
 <?php
-include_once 'header.php'
+include_once 'header.php';
+include 'DB_class.php';
+include 'compagny.php';
 ?>
 
     <div class="container col-md-8 col-lg-4">
@@ -56,7 +58,7 @@ include_once 'header.php'
                     
             
                 <!--Contenu du formulaire-->
-                <form class="needs-validation" novalidate="">
+                <form class="needs-validation" novalidate="" method="post">
                     
                     <!--Valeurs communes à tous les Users-->
                     <div id="user_attributes">
@@ -395,7 +397,7 @@ include_once 'header.php'
                         <div class="flex-column">
                             <div class="col-md-12 mb-3 text-center">
                                 <label class="text-muted" for="activity_compagny">activity area</label>
-                                <select class="form-select" id="activity_compagny" required="" >
+                                <select class="form-select" id="activity_compagny" name="activity_compagny" required="" >
                                     <option value="">Generalist</option>
                                     <option>Computer science</option>
                                     <option>Construction industry</option>
@@ -403,33 +405,34 @@ include_once 'header.php'
                                 </select>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="name_compagny" placeholder="Compagny name" value="" required="">
+                                <input type="text" class="form-control" id="name_compagny" name="name_compagny"  placeholder="Compagny name" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid name is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="email" class="form-control" id="email_compagny" placeholder="email" value="" required="">
+                                <input type="email" class="form-control" id="email_compagny" name="email_compagny" placeholder="email" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid email is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="zip_code" placeholder="Zip Code" required="">
+                                    <input type="text" class="form-control" id="zip_code"
+                                    name="zip_code" placeholder="Zip Code" required="">
                                     <div class="invalid-feedback">
                                         Un code postal valide est requis.
                                     </div>
                                     <div class="input-group-append">
-                                      <input type="button" class="btn btn-secondary"  id='btn_zip_code' value='OK'>
+                                      <input type="button" class="btn btn-secondary"  id='btn_zip_code'  name='btn_zip_code' value='OK'>
                                     </div>
                                   </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input class="form-control" type="text" placeholder="Town" id="town" readonly>
+                                <input class="form-control" type="text" placeholder="Town" id="town" name="town">
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="nb_cesi_internship" placeholder="Number of cesi interns" value="" required="">
+                                <input type="number" class="form-control" id="nb_cesi_internship" name="nb_cesi_internship" placeholder="Number of cesi interns" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid number is required.
                                 </div>
@@ -438,7 +441,22 @@ include_once 'header.php'
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_compagny' name='btn_validate_compagny'>Valider</button>
+                        <?php
+                            //lancer des instructions si le bouton est enclenché
+                            if(isset($_POST['btn_validate_compagny'])){
+                                //récupération des valeurs via la méthode POST
+                                $activity = $_POST['activity_compagny'];
+                                $compagny_name = $_POST['name_compagny'];
+                                $email = $_POST['email_compagny'];
+                                $zip_code = $_POST['zip_code'];
+                                $town = $_POST['town'];
+                                $number_interns = (int)$_POST['nb_cesi_internship'];
+                                //instantiation d'un nouvel objet compagny pour l'ajout
+                                $compagny = new compagny();
+                                $compagny->add_compagny($activity,$compagny_name,$email,$zip_code,$town,$number_interns);
+                            }
+                        ?>
                      
                     </div>
 

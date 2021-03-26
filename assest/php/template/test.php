@@ -1,6 +1,6 @@
 <?php
     include './DB_class.php';
-    include './locality.class.php'
+    include './locality.class.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
