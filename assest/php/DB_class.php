@@ -2,21 +2,17 @@
 
 //classe dbh permettant la connection a la bdd
 class dbh {
-    private $server_name;
-    private $username;
-    private $password;
-    private $db_name;
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "cesi";
+    private $db_name = "web_project_database";
 
-    protected function connect() {
-        $this->servername = "localhost";
-        $this->username = "root";
-        $this->password = "cesi";
-        $this->db_name = "web_project_database";
-
-        $connection = new mysqli($this->servername, $this->username, $this->password, $this->db_name);
-        
-        return $connection;
+    protected function connect(){
+        $dsn ='mysql:host='.$this->host.'; dbname='.$this->db_name;
+        $pdo = new PDO($dsn,$this->username, $this->password);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        return $pdo;
     }
+    
 }
-
 ?>

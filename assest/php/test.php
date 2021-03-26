@@ -1,10 +1,6 @@
 <?php
     include './DB_class.php';
-    include './locality/get_locality.php';
-    include './locality/view_locality.php';
-    include './locality/add_locality.php';
-    include './locality/update_locality.php';
-    include './locality/delete_locality.php';
+    include './locality.class.php'
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test</title>
 </head>
 <body>
 <form name='test' action='' method='post'>
@@ -27,28 +23,28 @@
 
 <?php
     if(isset($_POST["show_locality"])){
-        $locality = new view_locality();
-        $locality->show_locality();
+        $locality = new locality();
+        $locality->get_locality();
     }
+    //creation d'une locality
     if(isset($_POST["send_locality"])){
         $zip_code = $_POST["zip_code"];
         $city_name = $_POST["city_name"];
-        $add_locality = new adding_locality();
-        //echo $zip_code.'<br>',$city_name.'<br>';
-        $add_locality->add_locality($zip_code, $city_name);
+        $locality = new locality();
+        $locality->add_locality($zip_code,$city_name);
     }
+    //maj d'une locality
     if(isset($_POST["update_locality"])){
         $id_locality = $_POST["id_locality"];
         $zip_code = $_POST["zip_code"];
         $city_name = $_POST["city_name"];
-        $update_locality = new updating_locality();
-        //echo $id_locality.'<br>',$zip_code.'<br>',$city_name;
-        $update_locality->update_locality($id_locality,$zip_code,$city_name);
+        $locality = new locality();
+        $locality->modify_locality($id_locality,$zip_code,$city_name);
     }
     if(isset($_POST["delete_locality"])){
-        $id_locality = $_POST["id_locality"];
-        $delete_locality = new delete_locality();
-        $delete_locality->del_locality($id_locality);
+        $id_locality = (int)$_POST["id_locality"];
+        $locality = new locality();
+        $locality->delete_locality($id_locality);
     }
 ?>
 </body>
