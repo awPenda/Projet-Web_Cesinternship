@@ -40,7 +40,7 @@ include_once 'header.php'
                     
                         <h1>Create</h1>
 
-                        <select id="create_select_type" class="form-select form-select-lg mb-3" aria-label="Select type">
+                        <select name="create_select_type" id="create_select_type" class="form-select form-select-lg mb-3" aria-label="Select type">
                             <option value="" selected="selected">Choose what you want to add.</option>
                             <option>Compagny</option>
                             <option>Internship</option>
@@ -62,25 +62,25 @@ include_once 'header.php'
                     <div id="user_attributes">
                         <div class="flex-column">
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="user_login" placeholder="Login" value="" required="">
+                                <input type="text" class="form-control" name="user_login" id="user_login" placeholder="Login" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid login is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="user_name" placeholder="Name" value="" required="">
+                                <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid name is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="user_firstname" placeholder="Firstname" value="" required="">
+                                <input type="text" class="form-control" id="user_firstname" name="user_firstname" placeholder="Firstname" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid firstname is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="password" class="form-control" id="user_password" placeholder="Password" value="" required="">
+                                <input type="password" class="form-control" id="user_password" name="user_password" placeholder="Password" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid password is required.
                                 </div>
@@ -94,19 +94,19 @@ include_once 'header.php'
                     <div id="student_attributes">
                         <div class="flex-column">
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_high_school" placeholder="High-school" value="" required="">
+                                <input type="text" class="form-control" id="student_high_school" name="student_high_school" placeholder="High-school" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid High-school is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_promotion" placeholder="Promotion" value="" required="">
+                                <input type="text" class="form-control" id="student_promotion" name="student_promotion" placeholder="Promotion" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid promotion is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_id_wishlist" placeholder="Wishlist" value="" required="">
+                                <input type="text" class="form-control" id="student_id_wishlist" name="student_id_wishlist" placeholder="Wishlist" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid wishlist id is required.
                                 </div>
@@ -117,7 +117,7 @@ include_once 'header.php'
                             <div class="col-md-12 mb-3">
                                 <div id="div3_skills">
                                     <label class="text-muted" for="name_first_skill_student">First Skill</label>
-                                    <select class="form-select" id="name_first_skill_student" required="" >
+                                    <select class="form-select" id="name_first_skill_student" name="name_first_skill_student" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -146,7 +146,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_second_skill_student">Second Skill</label>
-                                    <select class="form-select" id="name_second_skill_student" required="" >
+                                    <select class="form-select" id="name_second_skill_student" name="name_second_skill_student" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -175,7 +175,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_third_skill_student">Third Skill</label>
-                                    <select class="form-select" id="name_third_skill_student" required="" >
+                                    <select class="form-select" id="name_third_skill_student" name="name_third_skill_student" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -211,26 +211,26 @@ include_once 'header.php'
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_student'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_student' name='btn_valide_student'>Valider</button>
                     </div>
 
                     <!--Valeurs pour les Délégués-->
                     <div id="delegate_attributes">
                         <div class="flex-column">
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="delegate_high_school" placeholder="High-school" value="" required="">
+                                <input type="text" class="form-control" id="delegate_high_school" name="delegate_high_school" placeholder="High-school" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid High-school is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="delegate_promotion" placeholder="Promotion" value="" required="">
+                                <input type="text" class="form-control" id="delegate_promotion" name="delegate_promotion" placeholder="Promotion" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid promotion is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="delegate_id_wishlist" placeholder="Wishlist" value="" required="">
+                                <input type="text" class="form-control" id="delegate_id_wishlist" name="delegate_id_wishlist" placeholder="Wishlist" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid wishlist id is required.
                                 </div>
@@ -240,7 +240,7 @@ include_once 'header.php'
                             <div class="col-md-12 mb-3">
                                 <div id="div1_skills">
                                     <label class="text-muted" for="name_first_skill_delegate">First Skill</label>
-                                    <select class="form-select" id="name_first_skill_delegate" required="" >
+                                    <select class="form-select" id="name_first_skill_delegate" name="name_first_skill_delegate" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -269,7 +269,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_second_skill_delegate">Second Skill</label>
-                                    <select class="form-select" id="name_second_skill_delegate" required="" >
+                                    <select class="form-select" id="name_second_skill_delegate" name="name_second_skill_delegate" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -298,7 +298,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_third_skill_delegate">Third Skill</label>
-                                    <select class="form-select" id="name_third_skill_delegate" required="" >
+                                    <select class="form-select" id="name_third_skill_delegate" name="name_third_skill_delegate" required="" >
                                         <option value="">Select one</option>    
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -330,7 +330,7 @@ include_once 'header.php'
                             </div>
 
                             <div class="text-center">
-                                <input type="checkbox" class="form-check-input" id="delegate_right" checked>
+                                <input type="checkbox" class="form-check-input" id="delegate_right" name="delegate_right" checked>
                                 <label class="form-check-label" for="delegate_right">
                                     Attribute right to the delegate
                                 </label>
@@ -339,7 +339,7 @@ include_once 'header.php'
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_delegate'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_delegate' name='btn_valide_delegate' >Valider</button>
                     </div>
 
                     <!--Valeurs pour les Pilotes -->
@@ -347,20 +347,20 @@ include_once 'header.php'
                         <div class="flex-column">
                             <div class="text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_teacher">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_teacher" name="pilot_status_teacher">
                                     <label class="form-check-label" for="pilot_status_teacher">Teacher</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_searcher">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_searcher" name="pilot_status_searcher">
                                     <label class="form-check-label" for="pilot_status_searcher">Searcher</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_both">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_both" name="pilot_status_both">
                                     <label class="form-check-label" for="pilot_status_both">Both</label>
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="pilot_promotion" placeholder="Promotion" value="" required="">
+                                <input type="text" class="form-control" id="pilot_promotion" name="pilot_promotion" placeholder="Promotion" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid promotion is required.
                                 </div>
@@ -369,14 +369,14 @@ include_once 'header.php'
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot' name='btn_valide_pilot'>Valider</button>
                     </div>
 
                      <!--Valeurs pour les Admin -->
                      <div id="admin_attributes">
                         <div class="col-md-12 mb-3">
                             <label class="text-muted" for="hiring_date">Hiring date</label>
-                            <input type="date" class="form-control" id="hiring_date" required="">
+                            <input type="date" class="form-control" id="hiring_date" name="hiring_date" required="">
                             <div class="invalid-feedback">
                                 A valid date is required.
                             </div>
@@ -384,7 +384,7 @@ include_once 'header.php'
                         
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_Admin'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_Admin' name='btn_valide_Admin'>Valider</button>
                     </div>
 
 
@@ -451,14 +451,14 @@ include_once 'header.php'
                         <div class="flex-column">
                             <div class="col-md-12 mb-3 ">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="status_internship" checked>
+                                    <input class="form-check-input" type="checkbox" id="status_internship" name="status_internship"  checked>
                                     <label class="form-check-label" for="status_internship">Internship available</label>
                                 </div>
                             </div>
 
                             <div class="col-md-12 mb-3 text-center">
                                 <label class="text-muted" for="student_level_internship">Student level</label>
-                                <select class="form-select" id="student_level_internship" required="" >
+                                <select class="form-select" id="student_level_internship" name="student_level_internship" required="" >
                                     <option value="">No level required</option>
                                     <option>Second year</option>
                                     <option>Third year</option>
@@ -467,7 +467,7 @@ include_once 'header.php'
                                 </select>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="nb_max_student_internship" placeholder="Number of available internship" value="" required="">
+                                <input type="number" class="form-control" id="nb_max_student_internship" name="nb_max_student_internship" placeholder="Number of available internship" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid number is required.
                                 </div>
@@ -476,7 +476,7 @@ include_once 'header.php'
                             <div class="col-md-12 mb-3">
                                 <div id="div2_skills">
                                     <label class="text-muted" for="name_first_skill_internship">First Skill</label>
-                                    <select class="form-select" id="name_first_skill_internship" required="" >
+                                    <select class="form-select" id="name_first_skill_internship" name="name_first_skill_internship" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -505,7 +505,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_second_skill_internship">Second Skill</label>
-                                    <select class="form-select" id="name_second_skill_internship" required="" >
+                                    <select class="form-select" id="name_second_skill_internship" name="name_second_skill_internship" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -534,7 +534,7 @@ include_once 'header.php'
                                         <option>Teamwork</option>
                                     </select>
                                     <label class="text-muted" for="name_third_skill_internship">Third Skill</label>
-                                    <select class="form-select" id="name_third_skill_internship" required="" >
+                                    <select class="form-select" id="name_third_skill_internship" name="name_third_skill_internship" required="" >
                                         <option value="">Select one</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
@@ -570,40 +570,40 @@ include_once 'header.php'
                             <div class="row" id="div_date_internship">
                                 <div class="col-md-6 col-sm-6 mb-3">
                                     <label class="text-muted" for="period_internship_beginning">beginning</label>
-                                    <input type="date" class="form-control" id="period_internship_beginning" value="" required="">
+                                    <input type="date" class="form-control" id="period_internship_beginning" name="period_internship_beginning" value="" required="">
                                     <div class="invalid-feedback">
                                         A valid date is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 mb-3">
                                     <label class="text-muted" for="period_internship_ending">Ending</label>
-                                    <input type="date" class="form-control" id="period_internship_ending" value="" required="">
+                                    <input type="date" class="form-control" id="period_internship_ending" name="period_internship_ending" value="" required="">
                                     <div class="invalid-feedback">
                                         A valid date is required.
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" placeholder="Base pay" step="0.01" min="546.00" id="base_pay_internship">
+                                <input type="number" class="form-control" placeholder="Base pay" step="0.01" min="546.00" id="base_pay_internship" name="base_pay_internship">
                                 <div class="invalid-feedback">
                                     A valid pay is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_compagny_internship" placeholder="Id of your compagny" value="" required="">
+                                <input type="number" class="form-control" id="id_compagny_internship" name="id_compagny_internship"  placeholder="Id of your compagny" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid number is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label class="text-muted" for="date_publication_internship">Publication date</label>
-                                <input type="date" class="form-control" id="date_publication_internship" value="" required="">
+                                <input type="date" class="form-control" id="date_publication_internship" name="date_publication_internship" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid date is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <textarea class="form-control" id="description_internship" placeholder="Description internship" required=""></textarea>
+                                <textarea class="form-control" id="description_internship" name="description_internship" placeholder="Description internship" required=""></textarea>
                                 <div class="invalid-feedback">
                                     A valid text is required.
                                 </div>
@@ -614,7 +614,7 @@ include_once 'header.php'
 
                         <hr class="mb-4">
                         <!--Bouton valider commande-->
-                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_internship'>Valider</button>
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_internship' name='btn_valide_internship'>Valider</button>
                      
                     </div>
 
@@ -622,7 +622,7 @@ include_once 'header.php'
 
                     
                     
-                    <button class="btn btn-sm btn-block" type="reset" id='reset' >Reset</button>
+                    <button class="btn btn-sm btn-block" type="reset" id='reset' name='reset'>Reset</button>
                 </form>
 
             </div>
