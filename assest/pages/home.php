@@ -46,7 +46,6 @@
                   <select class="custom-select d-block col-sm" id="search_select_type" required="">
                     <option value="">Compagny</option>
                     <option>Internship</option>
-                    <option>Admin</option>
                     <option>Pilot</option>
                     <option>Delegate</option>
                     <option>Student</option>
@@ -73,65 +72,79 @@
                   </div>
                 </div>
 
-                <div id="search_internship_div" class="form-inline">
-                  <select class="form-select col-sm-2" id="search_student_level_internship" required="" >
-                    <option value="">Level</option>
-                    <option>Second year</option>
-                    <option>Third year</option>
-                    <option>Fourth year</option>
-                    <option>Fifth year</option>
-                  </select>
-                  <input class="form-control col-sm-4" id="search_available" type="number" placeholder="available places" aria-label="available places">
-                  <select class="form-select col-sm-2" id="name_first_skill_internship" required="" >
-                    <option value="">Skill</option>
-                    <option>Analytical</option>
-                    <option>Creative Thinking</option>
-                    <option>Logical Thinking</option>
-                    <option>Problem Solving</option>
-                    <option>Administrative</option>
-                    <option>Business Intelligence</option>
-                    <option>Customer Service</option>
-                    <option>Microsoft Office Skills</option>
-                    <option>Active Listening</option>
-                    <option>Communication</option>
-                    <option>Collaboration</option>
-                    <option>Flexibility</option>
-                    <option>Interpersonal</option>
-                    <option>Presentation</option>
-                    <option>Writing</option>
-                    <option>Leadership</option>
-                    <option>Management</option>
-                    <option>Strategic Planning</option>
-                    <option>Motivational</option>
-                    <option>Organizational</option>
-                    <option>Multitasking</option>
-                    <option>Time Management</option>
-                    <option>Persuasive</option>
-                    <option>Conflict Resolution</option>
-                    <option>Teamwork</option>
-                  </select>
-                
-                  <!-- <label class="text-muted" for="period_internship_beginning">beginning</label> -->
-                  <!-- <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning"> -->
-                                             
-                  <!-- <label class="text-muted" for="period_internship_ending">Ending</label> -->
-                  <!-- <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending"> -->
-                                    
-                  <input class="form-control col-sm-2" id="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
-                
-                  <input class="form-control col-sm-2" id="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
-                
-                  <div class="form-inline form-control col-sm-4 text-muted">
-                    <input class="form-check-input " type="checkbox" value="" id="search_available_internship" checked>
-                    available
+                <div id="search_internship_div">
+                  <div class="form-inline">
+                    <select class="form-select col-sm-2" id="search_student_level_internship" required="" >
+                      <option value="">Level</option>
+                      <option>Second year</option>
+                      <option>Third year</option>
+                      <option>Fourth year</option>
+                      <option>Fifth year</option>
+                    </select>
+                    <input class="form-control col-sm-4" id="search_available" type="number" placeholder="available places" aria-label="available places">
+                    <select class="form-select col-sm-2" id="name_first_skill_internship" required="" >
+                      <option value="">Skill</option>
+                      <option>Analytical</option>
+                      <option>Creative Thinking</option>
+                      <option>Logical Thinking</option>
+                      <option>Problem Solving</option>
+                      <option>Administrative</option>
+                      <option>Business Intelligence</option>
+                      <option>Customer Service</option>
+                      <option>Microsoft Office Skills</option>
+                      <option>Active Listening</option>
+                      <option>Communication</option>
+                      <option>Collaboration</option>
+                      <option>Flexibility</option>
+                      <option>Interpersonal</option>
+                      <option>Presentation</option>
+                      <option>Writing</option>
+                      <option>Leadership</option>
+                      <option>Management</option>
+                      <option>Strategic Planning</option>
+                      <option>Motivational</option>
+                      <option>Organizational</option>
+                      <option>Multitasking</option>
+                      <option>Time Management</option>
+                      <option>Persuasive</option>
+                      <option>Conflict Resolution</option>
+                      <option>Teamwork</option>
+                    </select>
+                  
+                    <!-- <label class="text-muted" for="period_internship_beginning">beginning</label> -->
+                    <!-- <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning"> -->
+                                              
+                    <!-- <label class="text-muted" for="period_internship_ending">Ending</label> -->
+                    <!-- <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending"> -->
+                                      
+                    <input class="form-control col-sm-2" id="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
+                  
+                    <input class="form-control col-sm-2" id="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
+                  
+                    <div class="form-inline form-control col-sm-4 text-muted">
+                      <input class="form-check-input " type="checkbox" value="" id="search_available_internship" checked>
+                      available
+                    </div>
+                    
+                    <!-- <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship"> -->
+                    
+                  
                   </div>
-                  
-                  <!-- <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship"> -->
-                  
-                
-                
                 </div>
 
+                <div id="search_pilot_div">
+                  <div class="form-inline">
+                  <input class="form-control col-sm-6" id="search_name_pilot" type="text" placeholder="Name" aria-label="name">
+                  <input class="form-control col-sm-6" id="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
+                  </div>
+                  
+                </div>
+
+                <div id="search_delegate_div">
+                </div>
+
+                <div id="search_student_div">
+                </div>
 
                 <div class="">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search fa-2x"></i></button>
