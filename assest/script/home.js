@@ -1,10 +1,7 @@
 $(document).ready(function(){
 
-    window.alert("hey!");
 
     $('#search_select_type').change(function(){
-
-        window.alert("hey!");
 
         //clear display
         $("#search_compagny_div").css("display", "none");

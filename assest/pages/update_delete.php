@@ -427,6 +427,12 @@
                     <!--Valeurs Compagny-->
                     <div id="compagny_attributes">
                         <div class="flex-column">
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" id="id_compagny" placeholder="Id Compagny" value="" required="">
+                                <div class="invalid-feedback">
+                                    A valid name is required.
+                                </div>
+                            </div>
                             <div class="col-md-12 mb-3 text-center">
                                 <label class="text-muted" for="activity_compagny">activity area</label>
                                 <select class="form-select" id="activity_compagny" required="" >
