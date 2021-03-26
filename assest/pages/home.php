@@ -74,7 +74,7 @@
                 </div>
 
                 <div id="search_internship_div" class="form-inline">
-                  <select class="form-select col-sm-4" id="search_student_level_internship" required="" >
+                  <select class="form-select col-sm-2" id="search_student_level_internship" required="" >
                     <option value="">Level</option>
                     <option>Second year</option>
                     <option>Third year</option>
@@ -82,7 +82,7 @@
                     <option>Fifth year</option>
                   </select>
                   <input class="form-control col-sm-4" id="search_available" type="number" placeholder="available places" aria-label="available places">
-                  <select class="form-select col-sm-4" id="name_first_skill_internship" required="" >
+                  <select class="form-select col-sm-2" id="name_first_skill_internship" required="" >
                     <option value="">Skill</option>
                     <option>Analytical</option>
                     <option>Creative Thinking</option>
@@ -111,18 +111,23 @@
                     <option>Teamwork</option>
                   </select>
                 
-                  
-                                    <label class="text-muted" for="period_internship_beginning">beginning</label>
-                                    <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning" value="" required="">
-                                  
-                                
-                                    <label class="text-muted" for="period_internship_ending">Ending</label>
-                                    <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending" value="" required="">
+                  <!-- <label class="text-muted" for="period_internship_beginning">beginning</label> -->
+                  <!-- <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning"> -->
+                                             
+                  <!-- <label class="text-muted" for="period_internship_ending">Ending</label> -->
+                  <!-- <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending"> -->
                                     
+                  <input class="form-control col-sm-2" id="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
                 
+                  <input class="form-control col-sm-2" id="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
                 
-                
-                
+                  <div class="form-inline form-control col-sm-4 text-muted">
+                    <input class="form-check-input " type="checkbox" value="" id="search_available_internship" checked>
+                    available
+                  </div>
+                  
+                  <!-- <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship"> -->
+                  
                 
                 
                 </div>
