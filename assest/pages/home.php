@@ -31,20 +31,13 @@
         ?>
     
 
- 
         <nav class="navbar navbar-expand-lg navbar-light bg-light rounded justify-content-center">
-
-
-          
-          
-  
-        
-
             <form class="form-inline justify-content-center">
-
-                <div class="">
+              <div class="">
+                  <!-- Select pour choisir ce qu'on va chercher -->
                   <select class="custom-select d-block col-sm" id="search_select_type" required="">
-                    <option value="">Compagny</option>
+                    <option value="">Type</option>
+                    <option>Compagny</option>
                     <option>Internship</option>
                     <option>Pilot</option>
                     <option>Delegate</option>
@@ -54,14 +47,13 @@
                     Please provide a valid state.
                   </div>
                 </div>
-              
-              
+                <!-- div pour la recherche d'entreprise -->
                 <div id="search_compagny_div"  >
                   <div class="form-inline">
                     <input class="form-control col-sm-2" id="search_id_compagny" type="number" placeholder="id" aria-label="id">
                     <input class="form-control col-sm-2" id="search_name_compagny" type="text" placeholder="Name" aria-label="name">
                     <select class="form-select col-sm-3" id="search_activity_compagny" required="" >
-                      <option>activity area</option>
+                      <option value="">activity area</option>
                       <option>Generalist</option>
                       <option>Computer Science</option>
                       <option>construction industry</option>
@@ -71,7 +63,7 @@
                     <input class="form-control col-sm-3" id="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
                   </div>
                 </div>
-
+                <!-- div pour la recherche de stage -->
                 <div id="search_internship_div">
                   <div class="form-inline">
                     <select class="form-select col-sm-2" id="search_student_level_internship" required="" >
@@ -109,36 +101,26 @@
                       <option>Persuasive</option>
                       <option>Conflict Resolution</option>
                       <option>Teamwork</option>
-                    </select>
-                  
-                    <!-- <label class="text-muted" for="period_internship_beginning">beginning</label> -->
-                    <!-- <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning"> -->
-                                              
-                    <!-- <label class="text-muted" for="period_internship_ending">Ending</label> -->
-                    <!-- <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending"> -->
-                                      
+                    </select>        
+
                     <input class="form-control col-sm-2" id="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
-                  
                     <input class="form-control col-sm-2" id="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
                   
                     <div class="form-inline form-control col-sm-4 text-muted">
                       <input class="form-check-input " type="checkbox" value="" id="search_available_internship" checked>
                       available
                     </div>
-                    
-                    <!-- <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship"> -->
-                    
-                  
                   </div>
                 </div>
 
+                <!-- caractéristiques pour la recherche du pilote -->
                 <div id="search_pilot_div">
                   <div class="form-inline">
                     <input class="form-control col-sm-6" id="search_name_pilot" type="text" placeholder="Name" aria-label="name">
                     <input class="form-control col-sm-6" id="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
                   </div>
                 </div>
-
+                <!-- caractéristiques pour la recherche d'un délégué -->
                 <div id="search_delegate_div">
                   <div class="form-inline">
                     <input class="form-control col-sm-6" id="search_name_delegate" type="text" placeholder="Name" aria-label="name">
@@ -147,7 +129,7 @@
                     <input class="form-control col-sm-6" id="search_centre_locality_delegate" type="text" placeholder="Centre" aria-label="centre">
                   </div>
                 </div>
-
+                <!-- caractéristiques pour la recherche d'un étudiant -->
                 <div id="search_student_div">
                   <div class="form-inline">
                     <input class="form-control col-sm-6" id="search_name_student" type="text" placeholder="Name" aria-label="name">
@@ -162,20 +144,14 @@
                 </div>
 
             </form>
-
-            
-          
-
-
         </nav>
  
 
     <div class="container col-md-10 ">
   
         <hr class="mb-4">
-      
-  
-        <main role="main">
+    
+        <main>
 
 
           <div id="result_search">
@@ -215,11 +191,6 @@
 
 
           
-
-
-
-
-
 
           <!-- Wishlist -->
           <div class="jumbotron">
