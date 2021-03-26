@@ -52,7 +52,7 @@
                   <div class="form-inline">
                     <input class="form-control col-sm-2" id="search_id_compagny" name="search_id_compagny" type="number" placeholder="id" aria-label="id">
                     <input class="form-control col-sm-2" id="search_name_compagny" name="search_name_compagny" type="text" placeholder="Name" aria-label="name">
-                    <select class="form-select col-sm-3" id="search_activity_compagny" name="search_activity_compagny" required="" >
+                    <select class="form-select col-sm-3" id="search_activity_compagny" name="search_activity_compagny">
                       <option value="">activity area</option>
                       <option>Generalist</option>
                       <option>Computer Science</option>
@@ -66,7 +66,7 @@
                 <!-- div pour la recherche de stage -->
                 <div id="search_internship_div">
                   <div class="form-inline">
-                    <select class="form-select col-sm-2" id="search_student_level_internship" name="search_student_level_internship" required="" >
+                    <select class="form-select col-sm-2" id="search_student_level_internship" name="search_student_level_internship">
                       <option value="">Level</option>
                       <option>Second year</option>
                       <option>Third year</option>
@@ -74,7 +74,7 @@
                       <option>Fifth year</option>
                     </select>
                     <input class="form-control col-sm-4" id="search_available" name="search_available" type="number" placeholder="available places" aria-label="available places">
-                    <select class="form-select col-sm-2" id="name_first_skill_internship" name="name_first_skill_internship" required="" >
+                    <select class="form-select col-sm-2" id="name_first_skill_internship" name="name_first_skill_internship">
                       <option value="">Skill</option>
                       <option>Analytical</option>
                       <option>Creative Thinking</option>
