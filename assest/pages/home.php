@@ -35,7 +35,7 @@
             <form class="form-inline justify-content-center">
               <div class="">
                   <!-- Select pour choisir ce qu'on va chercher -->
-                  <select class="custom-select d-block col-sm" id="search_select_type" required="">
+                  <select class="custom-select d-block col-sm" id="search_select_type" name="search_select_type" required="">
                     <option value="">Type</option>
                     <option>Compagny</option>
                     <option>Internship</option>
@@ -50,31 +50,31 @@
                 <!-- div pour la recherche d'entreprise -->
                 <div id="search_compagny_div"  >
                   <div class="form-inline">
-                    <input class="form-control col-sm-2" id="search_id_compagny" type="number" placeholder="id" aria-label="id">
-                    <input class="form-control col-sm-2" id="search_name_compagny" type="text" placeholder="Name" aria-label="name">
-                    <select class="form-select col-sm-3" id="search_activity_compagny" required="" >
+                    <input class="form-control col-sm-2" id="search_id_compagny" name="search_id_compagny" type="number" placeholder="id" aria-label="id">
+                    <input class="form-control col-sm-2" id="search_name_compagny" name="search_name_compagny" type="text" placeholder="Name" aria-label="name">
+                    <select class="form-select col-sm-3" id="search_activity_compagny" name="search_activity_compagny" required="" >
                       <option value="">activity area</option>
                       <option>Generalist</option>
                       <option>Computer Science</option>
                       <option>construction industry</option>
                       <option>onboard systems</option>
                     </select>
-                    <input class="form-control col-sm-2" id="search_zipcode_compagny" type="text" placeholder="ZipCode" aria-label="zipcode">
-                    <input class="form-control col-sm-3" id="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
+                    <input class="form-control col-sm-2" id="search_zipcode_compagny" name="search_zipcode_compagny" type="text" placeholder="ZipCode" aria-label="zipcode">
+                    <input class="form-control col-sm-3" id="search_cesi_interns_compagny" name="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
                   </div>
                 </div>
                 <!-- div pour la recherche de stage -->
                 <div id="search_internship_div">
                   <div class="form-inline">
-                    <select class="form-select col-sm-2" id="search_student_level_internship" required="" >
+                    <select class="form-select col-sm-2" id="search_student_level_internship" name="search_student_level_internship" required="" >
                       <option value="">Level</option>
                       <option>Second year</option>
                       <option>Third year</option>
                       <option>Fourth year</option>
                       <option>Fifth year</option>
                     </select>
-                    <input class="form-control col-sm-4" id="search_available" type="number" placeholder="available places" aria-label="available places">
-                    <select class="form-select col-sm-2" id="name_first_skill_internship" required="" >
+                    <input class="form-control col-sm-4" id="search_available" name="search_available" type="number" placeholder="available places" aria-label="available places">
+                    <select class="form-select col-sm-2" id="name_first_skill_internship" name="name_first_skill_internship" required="" >
                       <option value="">Skill</option>
                       <option>Analytical</option>
                       <option>Creative Thinking</option>
@@ -103,11 +103,11 @@
                       <option>Teamwork</option>
                     </select>        
 
-                    <input class="form-control col-sm-2" id="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
-                    <input class="form-control col-sm-2" id="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
+                    <input class="form-control col-sm-2" id="search_base_pay_internship" name="search_base_pay_internship" type="number" placeholder="Base pay" aria-label="Base pay">
+                    <input class="form-control col-sm-2" id="search_compagny_internship" name="search_compagny_internship" type="text" placeholder="Compagny" aria-label="Compagny internship">
                   
                     <div class="form-inline form-control col-sm-4 text-muted">
-                      <input class="form-check-input " type="checkbox" value="" id="search_available_internship" checked>
+                      <input class="form-check-input " type="checkbox" value="" id="search_available_internship" name="search_available_internship" checked>
                       available
                     </div>
                   </div>
@@ -116,31 +116,31 @@
                 <!-- caractéristiques pour la recherche du pilote -->
                 <div id="search_pilot_div">
                   <div class="form-inline">
-                    <input class="form-control col-sm-6" id="search_name_pilot" type="text" placeholder="Name" aria-label="name">
-                    <input class="form-control col-sm-6" id="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_name_pilot" name="search_name_pilot" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_pilot" name="search_first_name_pilot" type="text" placeholder="Firstname" aria-label="firstname">
                   </div>
                 </div>
                 <!-- caractéristiques pour la recherche d'un délégué -->
                 <div id="search_delegate_div">
                   <div class="form-inline">
-                    <input class="form-control col-sm-6" id="search_name_delegate" type="text" placeholder="Name" aria-label="name">
-                    <input class="form-control col-sm-6" id="search_first_name_delegate" type="text" placeholder="Firstname" aria-label="firstname">
-                    <input class="form-control col-sm-6" id="search_promotion_delegate" type="text" placeholder="Promotion" aria-label="promotion">
-                    <input class="form-control col-sm-6" id="search_centre_locality_delegate" type="text" placeholder="Centre" aria-label="centre">
+                    <input class="form-control col-sm-6" id="search_name_delegate" name="search_name_delegate" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_delegate" name="search_first_name_delegate" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_promotion_delegate" name="search_promotion_delegate" type="text" placeholder="Promotion" aria-label="promotion">
+                    <input class="form-control col-sm-6" id="search_centre_locality_delegate" name="search_centre_locality_delegate" type="text" placeholder="Centre" aria-label="centre">
                   </div>
                 </div>
                 <!-- caractéristiques pour la recherche d'un étudiant -->
                 <div id="search_student_div">
                   <div class="form-inline">
-                    <input class="form-control col-sm-6" id="search_name_student" type="text" placeholder="Name" aria-label="name">
-                    <input class="form-control col-sm-6" id="search_first_name_student" type="text" placeholder="Firstname" aria-label="firstname">
-                    <input class="form-control col-sm-6" id="search_promotion_student" type="text" placeholder="Promotion" aria-label="promotion">
-                    <input class="form-control col-sm-6" id="search_centre_locality_student" type="text" placeholder="Centre" aria-label="centre">
+                    <input class="form-control col-sm-6" id="search_name_student" name="search_name_student" type="text" placeholder="Name" aria-label="name">
+                    <input class="form-control col-sm-6" id="search_first_name_student" name="search_first_name_student" type="text" placeholder="Firstname" aria-label="firstname">
+                    <input class="form-control col-sm-6" id="search_promotion_student" name="search_promotion_student" type="text" placeholder="Promotion" aria-label="promotion">
+                    <input class="form-control col-sm-6" id="search_centre_locality_student" name="search_centre_locality_student" type="text" placeholder="Centre" aria-label="centre">
                   </div>
                 </div>
 
                 <div class="">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search fa-2x"></i></button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search_btn"><i class="fas fa-search fa-2x"></i></button>
                 </div>
 
             </form>

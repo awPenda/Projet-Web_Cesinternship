@@ -45,7 +45,7 @@
             
             <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
   
-            <select id="select_type" class="form-select form-select mb-3" aria-label="Select type" required="">
+            <select id="select_type" name="select_type" class="form-select form-select mb-3" aria-label="Select type" required="">
               <option value="">Select a type of account</option>
               <option>Admin</option>
               <option>Pilot</option>
@@ -54,11 +54,11 @@
             </select>
 
             <!-- <label for="id_user_type" class="sr-only">Email address</label> -->
-            <input type="number" id="id_user_type" class="form-control" placeholder="Id user" required="" autofocus="">
+            <input type="number" id="id_user_type" name="id_user_type" class="form-control" placeholder="Id user" required="" autofocus="">
             <!-- <label for="input_password" class="sr-only">Password</label> -->
-            <input type="password" id="input_password" class="form-control" placeholder="Password" required="">
+            <input type="password" id="input_password" name="input_password" class="form-control" placeholder="Password" required="">
             
-            <button id="sign_in_btn" class="btn btn-lg btn-block" type="submit">Sign in</button>
+            <button id="sign_in_btn" name="sign_in_btn" class="btn btn-lg btn-block" type="submit">Sign in</button>
         </form>
     </div>
 
