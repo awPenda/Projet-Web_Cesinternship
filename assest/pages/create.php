@@ -31,6 +31,8 @@
 include_once 'header.php';
 include 'DB_class.php';
 include 'compagny.php';
+include 'internship.php';
+include 'user.php';
 ?>
 
     <div class="container col-md-8 col-lg-4">
@@ -215,6 +217,31 @@ include 'compagny.php';
                         <!--Bouton valider commande-->
                         <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_student' name='btn_valide_student'>Valider</button>
                     </div>
+                    <?php
+                    //si le bouton encléché cela lance cette fonction
+                    if(isset($_POST['btn_valide_student'])){
+                        //recuperation des variables par post
+                        $login = $_POST["user_login"];
+                        $name = $_POST["user_name"];
+                        $f_name = $_POST["user_firstname"];
+                        $pwd = $_POST["user_password"];
+                        $school = $_POST["student_high_school"
+                        ];
+                        $promotion = $_POST["student_promotion"
+                        ];
+                        $whishlist = $_POST["student_id_wishlist"
+                        ];
+                        $skill1 = $_POST["name_first_skill_student"
+                        ];
+                        $skill2 = $_POST["name_second_skill_student"
+                        ];
+                        $skill3 = $_POST["name_third_skill_student"
+                        ];
+                        //instanciation de la classe pour injeter dans la bdd
+                        $admin = new user();
+                        $admin->add_student($login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3);
+                    }
+                    ?>
 
                     <!--Valeurs pour les Délégués-->
                     <div id="delegate_attributes">
@@ -332,7 +359,7 @@ include 'compagny.php';
                             </div>
 
                             <div class="text-center">
-                                <input type="checkbox" class="form-check-input" id="delegate_right" name="delegate_right" checked>
+                                <input type="checkbox" class="form-check-input" id="delegate_right" name="delegate_right" checked value = 'yes'>
                                 <label class="form-check-label" for="delegate_right">
                                     Attribute right to the delegate
                                 </label>
@@ -343,21 +370,41 @@ include 'compagny.php';
                         <!--Bouton valider commande-->
                         <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_delegate' name='btn_valide_delegate' >Valider</button>
                     </div>
+                    <?php
+                    //si le bouton encléché cela lance cette fonction
+                    if(isset($_POST['btn_valide_delegate'])){
+                        //recuperation des variables par post
+                        $login = $_POST['user_login'];
+                        $name = $_POST['user_name'];
+                        $f_name = $_POST['user_firstname'];
+                        $pwd = $_POST['user_password'];
+                        $school = $_POST["delegate_high_school"];
+                        $promotion = $_POST["delegate_promotion"];
+                        $whishlist = $_POST["delegate_id_wishlist"];
+                        $skill1 = $_POST["name_first_skill_delegate"];
+                        $skill2 = $_POST["name_second_skill_delegate"];
+                        $skill3 = $_POST["name_third_skill_delegate"];
+                        $right = $_POST["delegate_right"];
+                        //instanciation de la classe pour injeter dans la bdd
+                        $admin = new user();
+                        $admin->add_delegate($login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3,$right);
+                    }
+                    ?>
 
                     <!--Valeurs pour les Pilotes -->
                     <div id="pilot_attributes">
                         <div class="flex-column">
                             <div class="text-center">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_teacher" name="pilot_status_teacher">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_teacher" name="pilot_status_teacher" value="Teacher">
                                     <label class="form-check-label" for="pilot_status_teacher">Teacher</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_searcher" name="pilot_status_searcher">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_searcher" name="pilot_status_searcher" value="Searcher">
                                     <label class="form-check-label" for="pilot_status_searcher">Searcher</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_both" name="pilot_status_both">
+                                    <input class="form-check-input" type="radio" name="pilot_status" id="pilot_status_both" name="pilot_status_both" value="Both">
                                     <label class="form-check-label" for="pilot_status_both">Both</label>
                                 </div>
                             </div>
@@ -373,6 +420,21 @@ include 'compagny.php';
                         <!--Bouton valider commande-->
                         <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_pilot' name='btn_valide_pilot'>Valider</button>
                     </div>
+                    <?php
+                    //si le bouton encléché cela lance cette fonction
+                    if(isset($_POST['btn_valide_pilot'])){
+                        //recuperation des variables par post
+                        $login = $_POST['user_login'];
+                        $name = $_POST['user_name'];
+                        $f_name = $_POST['user_firstname'];
+                        $pwd = $_POST['user_password'];
+                        $pilot_status = $_POST['pilot_status'];
+                        $promotion = $_POST['pilot_promotion'];
+                        //instanciation de la classe pour injeter dans la bdd
+                        $admin = new user();
+                        $admin->add_pilot($login,$name,$f_name,$pwd,$pilot_status,$promotion);
+                    }
+                    ?>
 
                      <!--Valeurs pour les Admin -->
                      <div id="admin_attributes">
@@ -388,8 +450,20 @@ include 'compagny.php';
                         <!--Bouton valider commande-->
                         <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_Admin' name='btn_valide_Admin'>Valider</button>
                     </div>
-
-
+                    <?php
+                    //si le bouton encléché cela lance cette fonction
+                    if(isset($_POST['btn_valide_Admin'])){
+                        //recuperation des variables par post
+                        $login = $_POST['user_login'];
+                        $name = $_POST['user_name'];
+                        $f_name = $_POST['user_firstname'];
+                        $pwd = $_POST['user_password'];
+                        $h_date = $_POST['hiring_date'];
+                        //instanciation de la classe pour injeter dans la bdd
+                        $admin = new user();
+                        $admin->add_admin($login,$name,$f_name,$pwd,$h_date);
+                    }
+                    ?>
 
 
                     <!--Valeurs Compagny-->
@@ -398,7 +472,8 @@ include 'compagny.php';
                             <div class="col-md-12 mb-3 text-center">
                                 <label class="text-muted" for="activity_compagny">activity area</label>
                                 <select class="form-select" id="activity_compagny" name="activity_compagny" required="" >
-                                    <option value="">Generalist</option>
+                                    <option value="">Select one</option>
+                                    <option>Generalist</option>
                                     <option>Computer science</option>
                                     <option>Construction industry</option>
                                     <option>Onboard systems</option>
@@ -469,7 +544,7 @@ include 'compagny.php';
                         <div class="flex-column">
                             <div class="col-md-12 mb-3 ">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="status_internship" name="status_internship"  checked>
+                                    <input class="form-check-input" type="checkbox" id="status_internship" name="status_internship"  checked value = "1">
                                     <label class="form-check-label" for="status_internship">Internship available</label>
                                 </div>
                             </div>
@@ -635,6 +710,27 @@ include 'compagny.php';
                         <button class="btn btn-dark btn-lg btn-block" type="submit" id='btn_valide_internship' name='btn_valide_internship'>Valider</button>
                      
                     </div>
+                    <?php
+                    //lancer des instructions si le bouton est enclenché
+                    if(isset($_POST['btn_valide_internship'])){
+                    //récupération des valeurs via la méthode POST
+                    $available = $_POST["status_internship"];
+                    $level = $_POST["student_level_internship"];
+                    $number =$_POST["nb_max_student_internship"];
+                    $skill1 = $_POST["name_first_skill_internship"];
+                    $skill2 = $_POST["name_second_skill_internship"];
+                    $skill3 = $_POST["name_third_skill_internship"];
+                    $beginning = $_POST["period_internship_beginning"];
+                    $ending = $_POST["period_internship_ending"];
+                    $pay = $_POST["base_pay_internship"];
+                    $id_compagny = $_POST["id_compagny_internship"];
+                    $publication = $_POST["date_publication_internship"];
+                    $description = $_POST["description_internship"];
+                    //instantiation pour ajouter a la bdd
+                    $internship = new internship();
+                    $internship->add_internship($available,$level,$number,$skill1,$skill2,$skill3,$beginning,$ending,$pay,$id_compagny,$publication,$description);
+                    }
+                    ?>
 
 
 
