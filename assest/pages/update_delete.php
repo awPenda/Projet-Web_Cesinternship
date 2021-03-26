@@ -34,7 +34,7 @@
 
     <div class="container col-md-8 col-lg-4">
 
-        <main role="main">
+        <main>
             <div class="jumbotron">
 
                 <div class='text-center'>
@@ -42,7 +42,7 @@
                         <h1>Update</h1>
 
                         <select id="create_select_type" class="form-select form-select-lg mb-3" aria-label="Select type" required="">
-                            <option selected="selected">Choose what you want to modify.</option>
+                            <option selected="selected" value="">Choose what you want to modify.</option>
                             <option>Compagny</option>
                             <option>Internship</option>
                             <option>Admin</option>
@@ -119,13 +119,13 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_delegate" placeholder="Delegate" value="" required="">
+                                <input type="number" class="form-control" id="id_delegate_for_student" placeholder="Delegate" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid delegate id is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_wishlist" placeholder="Wishlist" value="" required="">
+                                <input type="number" class="form-control" id="id_wishlist_student" placeholder="Wishlist" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid wishlist id is required.
                                 </div>
@@ -134,6 +134,7 @@
                                 <div id="div_skills">
                                     <label class="text-muted" for="name_first_skill_student">First Skill</label>
                                     <select class="form-select" id="name_first_skill_student" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -162,6 +163,7 @@
                                     </select>
                                     <label class="text-muted" for="name_second_skill_student">Second Skill</label>
                                     <select class="form-select" id="name_second_skill_student" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -190,6 +192,7 @@
                                     </select>
                                     <label class="text-muted" for="name_third_skill_student">Third Skill</label>
                                     <select class="form-select" id="name_third_skill_student" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -229,7 +232,7 @@
                     <!--Valeurs pour les Délégués-->
                     <div id="delegate_attributes">
                         <div class="col-md-12 mb-3">
-                            <input type="number" class="form-control" id="id_student" placeholder="Id student" value="" required="">
+                            <input type="number" class="form-control" id="id_student_delegate" placeholder="Id student" value="" required="">
                             <div class="invalid-feedback">
                                 A valid number is required.
                             </div>
@@ -242,27 +245,28 @@
                         </div>
                         <div class="flex-column">
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_high_school" placeholder="High-school" value="" required="">
+                                <input type="text" class="form-control" id="delegate_high_school" placeholder="High-school" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid High-school is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_promotion" placeholder="Promotion" value="" required="">
+                                <input type="text" class="form-control" id="delegate_promotion" placeholder="Promotion" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid promotion is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_wishlist" placeholder="Wishlist" value="" required="">
+                                <input type="number" class="form-control" id="id_wishlist_delegate" placeholder="Wishlist" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid wishlist id is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <div id="div_skills">
+                                <div id="div1_skills">
                                     <label class="text-muted" for="name_first_skill_delegate">First Skill</label>
                                     <select class="form-select" id="name_first_skill_delegate" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -291,6 +295,7 @@
                                     </select>
                                     <label class="text-muted" for="name_second_skill_delegate">Second Skill</label>
                                     <select class="form-select" id="name_second_skill_delegate" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -319,6 +324,7 @@
                                     </select>
                                     <label class="text-muted" for="name_third_skill_delegate">Third Skill</label>
                                     <select class="form-select" id="name_third_skill_delegate" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -385,7 +391,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="student_promotion" placeholder="Promotion" value="" required="">
+                                <input type="text" class="form-control" id="pilot_promotion" placeholder="Promotion" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid promotion is required.
                                 </div>
@@ -520,9 +526,10 @@
                             </div>
 
                             <div class="col-md-12 mb-3">
-                                <div id="div_skills">
+                                <div id="div2_skills">
                                     <label class="text-muted" for="name_first_skill_internship">First Skill</label>
                                     <select class="form-select" id="name_first_skill_internship" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -551,6 +558,7 @@
                                     </select>
                                     <label class="text-muted" for="name_second_skill_internship">Second Skill</label>
                                     <select class="form-select" id="name_second_skill_internship" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -579,6 +587,7 @@
                                     </select>
                                     <label class="text-muted" for="name_third_skill_internship">Third Skill</label>
                                     <select class="form-select" id="name_third_skill_internship" required="" >
+                                        <option value="">Skill</option>
                                         <option>Analytical</option>
                                         <option>Creative Thinking</option>
                                         <option>Logical Thinking</option>
@@ -613,14 +622,14 @@
                             <div class="row" id="div_date_internship">
                                 <div class="col-md-6 col-sm-6 mb-3">
                                     <label class="text-muted" for="period_internship_beginning">Beginning</label>
-                                    <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning" value="" required="">
+                                    <input type="date" class="form-control" id="period_internship_beginning" value="" required="">
                                     <div class="invalid-feedback">
                                         A valid date is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 mb-3">
                                     <label class="text-muted" for="period_internship_ending">Ending</label>
-                                    <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending" value="" required="">
+                                    <input type="date" class="form-control" id="period_internship_ending" value="" required="">
                                     <div class="invalid-feedback">
                                         A valid date is required.
                                     </div>
@@ -640,13 +649,13 @@
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label class="text-muted" for="date_publication_internship">Publication date</label>
-                                <input type="date" class="form-control" id="date_publication_internship" placeholder="date publication internship" value="" required="">
+                                <input type="date" class="form-control" id="date_publication_internship" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid date is required.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <textarea class="form-control" id="description_internship" placeholder="Description internship" value="" required=""></textarea>
+                                <textarea class="form-control" id="description_internship" placeholder="Description internship" required=""></textarea>
                                 <div class="invalid-feedback">
                                     A valid text is required.
                                 </div>

@@ -46,6 +46,7 @@
             <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
   
             <select id="select_type" class="form-select form-select mb-3" aria-label="Select type" required="">
+              <option value="">Select a type of account</option>
               <option>Admin</option>
               <option>Pilot</option>
               <option>Delegate</option>
