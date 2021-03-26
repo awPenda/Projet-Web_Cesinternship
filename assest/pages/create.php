@@ -397,9 +397,9 @@ include_once 'header.php'
                                 <label class="text-muted" for="activity_compagny">activity area</label>
                                 <select class="form-select" id="activity_compagny" required="" >
                                     <option value="">Generalist</option>
-                                    <option>Computer Science</option>
-                                    <option>construction industry</option>
-                                    <option>onboard systems</option>
+                                    <option>Computer science</option>
+                                    <option>Construction industry</option>
+                                    <option>Onboard systems</option>
                                 </select>
                             </div>
                             <div class="col-md-12 mb-3">

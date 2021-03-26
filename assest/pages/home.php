@@ -18,7 +18,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
      <!-- Lien page de style & script-->
-     <link rel="stylesheet" href="../style/style.css">
+     <link rel="stylesheet" href="../style/home_style.css">
      <script src="../script/home.js"></script>
      <!-- Titre de la page-->
      <title>Home</title>
@@ -31,67 +31,115 @@
         ?>
     
 
-  <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+ 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded justify-content-center">
 
 
           
           
   
-          <div class="">
-            
+        
 
-            <form class="form-inline justify-content-lg-center">
+            <form class="form-inline justify-content-center">
 
-              <div id="search_compagny_div" class="form-inline">
-                <input class="form-control col-sm-2" id="search_id_compagny" type="number" placeholder="id" aria-label="id">
-                <input class="form-control col-sm-2" id="search_name_compagny" type="text" placeholder="Name" aria-label="name">
-                <select class="form-select col-sm-3" id="search_activity_compagny" required="" >
-                  <option>activity area</option>
-                  <option>Generalist</option>
-                  <option>Computer Science</option>
-                  <option>construction industry</option>
-                  <option>onboard systems</option>
-                </select>
-                <input class="form-control col-sm-2" id="search_zipcode_compagny" type="text" placeholder="ZipCode" aria-label="zipcode">
-                <input class="form-control col-sm-3" id="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
-              </div>
-
-              <div id="search_internship_div" class="form-inline">
-                <select class="form-select col-sm-4" id="search_student_level_internship" required="" >
-                  <option value="">No level required</option>
-                  <option>Second year</option>
-                  <option>Third year</option>
-                  <option>Fourth year</option>
-                  <option>Fifth year</option>
-                </select>
-                <input class="form-control col-sm-3" id="search_available" type="number" placeholder="available places" aria-label="available places">
-              </div>
-
-
-              <div class="form-inline">
-                <select class="custom-select d-block col-sm" id="search_select_type" required="">
-                  <option value="">Compagny</option>
-                  <option>Internship</option>
-                  <option>Admin</option>
-                  <option>Pilot</option>
-                  <option>Delegate</option>
-                  <option>Student</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
+                <div class="">
+                  <select class="custom-select d-block col-sm" id="search_select_type" required="">
+                    <option value="">Compagny</option>
+                    <option>Internship</option>
+                    <option>Admin</option>
+                    <option>Pilot</option>
+                    <option>Delegate</option>
+                    <option>Student</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
                 </div>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-              </div>
+              
+              
+                <div id="search_compagny_div"  >
+                  <div class="form-inline">
+                    <input class="form-control col-sm-2" id="search_id_compagny" type="number" placeholder="id" aria-label="id">
+                    <input class="form-control col-sm-2" id="search_name_compagny" type="text" placeholder="Name" aria-label="name">
+                    <select class="form-select col-sm-3" id="search_activity_compagny" required="" >
+                      <option>activity area</option>
+                      <option>Generalist</option>
+                      <option>Computer Science</option>
+                      <option>construction industry</option>
+                      <option>onboard systems</option>
+                    </select>
+                    <input class="form-control col-sm-2" id="search_zipcode_compagny" type="text" placeholder="ZipCode" aria-label="zipcode">
+                    <input class="form-control col-sm-3" id="search_cesi_interns_compagny" type="number" placeholder="cesi interns" aria-label="nbcesiinterns">
+                  </div>
+                </div>
+
+                <div id="search_internship_div" class="form-inline">
+                  <select class="form-select col-sm-4" id="search_student_level_internship" required="" >
+                    <option value="">Level</option>
+                    <option>Second year</option>
+                    <option>Third year</option>
+                    <option>Fourth year</option>
+                    <option>Fifth year</option>
+                  </select>
+                  <input class="form-control col-sm-4" id="search_available" type="number" placeholder="available places" aria-label="available places">
+                  <select class="form-select col-sm-4" id="name_first_skill_internship" required="" >
+                    <option value="">Skill</option>
+                    <option>Analytical</option>
+                    <option>Creative Thinking</option>
+                    <option>Logical Thinking</option>
+                    <option>Problem Solving</option>
+                    <option>Administrative</option>
+                    <option>Business Intelligence</option>
+                    <option>Customer Service</option>
+                    <option>Microsoft Office Skills</option>
+                    <option>Active Listening</option>
+                    <option>Communication</option>
+                    <option>Collaboration</option>
+                    <option>Flexibility</option>
+                    <option>Interpersonal</option>
+                    <option>Presentation</option>
+                    <option>Writing</option>
+                    <option>Leadership</option>
+                    <option>Management</option>
+                    <option>Strategic Planning</option>
+                    <option>Motivational</option>
+                    <option>Organizational</option>
+                    <option>Multitasking</option>
+                    <option>Time Management</option>
+                    <option>Persuasive</option>
+                    <option>Conflict Resolution</option>
+                    <option>Teamwork</option>
+                  </select>
+                
+                  
+                                    <label class="text-muted" for="period_internship_beginning">beginning</label>
+                                    <input type="date" class="form-control" id="period_internship_beginning" placeholder="period internship beginning" value="" required="">
+                                  
+                                
+                                    <label class="text-muted" for="period_internship_ending">Ending</label>
+                                    <input type="date" class="form-control" id="period_internship_ending" placeholder="period internship ending" value="" required="">
+                                    
+                
+                
+                
+                
+                
+                
+                </div>
+
+
+                <div class="">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search fa-2x"></i></button>
+                </div>
+
             </form>
 
             
-          </div>
+          
 
 
         </nav>
-  </div>
-       
+ 
 
     <div class="container col-md-10 ">
   
