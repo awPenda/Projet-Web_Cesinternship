@@ -225,18 +225,12 @@ include 'user.php';
                         $name = $_POST["user_name"];
                         $f_name = $_POST["user_firstname"];
                         $pwd = $_POST["user_password"];
-                        $school = $_POST["student_high_school"
-                        ];
-                        $promotion = $_POST["student_promotion"
-                        ];
-                        $whishlist = $_POST["student_id_wishlist"
-                        ];
-                        $skill1 = $_POST["name_first_skill_student"
-                        ];
-                        $skill2 = $_POST["name_second_skill_student"
-                        ];
-                        $skill3 = $_POST["name_third_skill_student"
-                        ];
+                        $school = $_POST["student_high_school"];
+                        $promotion = $_POST["student_promotion"];
+                        $whishlist = $_POST["student_id_wishlist"];
+                        $skill1 = $_POST["name_first_skill_student"];
+                        $skill2 = $_POST["name_second_skill_student"];
+                        $skill3 = $_POST["name_third_skill_student"];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
                         $admin->add_student($login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3);
