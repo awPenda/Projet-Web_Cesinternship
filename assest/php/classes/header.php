@@ -1,3 +1,4 @@
+<?php //classe contenant le header?>
 <header>
     <nav class="navbar navbar-dark bg-dark"> 
         <h1 id="Title_cesinternship"><img src="../pictures/CesinternshipLOGO.png" alt="Cesinternship" width="250"></h1>

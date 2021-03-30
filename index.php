@@ -1,3 +1,7 @@
+<?php
+include "./assest/php/classes/DB_class.php";
+include "./assest/php/classes/connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +44,7 @@
 
 
     <div id="main_div" class="text-center">
-        <form class="form-signin">
+        <form class="form-signin" method="POST">
             <img class="mb-4" src="./assest/pictures/LOGO.png" alt="LOGO" style="width:50%">
             
             <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
@@ -54,13 +58,64 @@
             </select>
 
             <!-- <label for="id_user_type" class="sr-only">Email address</label> -->
-            <input type="number" id="id_user_type" name="id_user_type" class="form-control" placeholder="Id user" required="" autofocus="">
+            <input type="text" id="user_name" name="user_name" class="form-control" placeholder="Username" required="">
             <!-- <label for="input_password" class="sr-only">Password</label> -->
             <input type="password" id="input_password" name="input_password" class="form-control" placeholder="Password" required="">
             
             <button id="sign_in_btn" name="sign_in_btn" class="btn btn-lg btn-block" type="submit">Sign in</button>
         </form>
     </div>
+
+    <?php
+//permet à l'utilisateur de s'authentifier 
+
+   session_start(); // tu start toujours la session
+
+   
+
+   if(isset($_POST['sign_in_btn'])){ // si tu appuies sur le bouton se co 
+      //@$login=$_POST["login"];
+      //@$pass=md5($_POST["pass"]);
+      //@$valider=$_POST["valider"];
+      $type = $_POST["select_type"];
+      if($type == "Admin"){
+        $mode = 1;
+        $login = $_POST['user_name'];
+        $pass = $_POST['input_password'];
+        //echo $mode;
+        //instantiation
+        $connection = new connection();
+        $connection->conn_admin($login,$pass);
+      }
+      if($type == "Pilot"){
+        $mode = 2;
+        $login = $_POST['user_name'];
+        $pass = $_POST['input_password'];
+        //echo $mode;
+        //instantiation
+        $connection = new connection();
+        $connection->conn_pilot($login,$pass);
+      }
+      if($type == "Delegate"){
+        $mode = 3;
+        $login = $_POST['user_name'];
+        $pass = $_POST['input_password'];
+        //echo $mode;
+        //instantiation
+        $connection = new connection();
+        $connection->conn_delegate($login,$pass);
+      }
+      if($type == "Student"){
+        $mode = 4;
+        $login = $_POST['user_name'];
+        $pass = $_POST['input_password'];
+        //echo $mode;
+        //instantiation
+        $connection = new connection();
+        $connection->conn_user($login,$pass);
+      }
+   }
+?>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">© 2021 Cesinternship</p>

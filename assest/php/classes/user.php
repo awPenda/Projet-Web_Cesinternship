@@ -44,10 +44,10 @@ public function delete_pilot($id_pilot){
 
 //fonctions pour les admin
 public function add_admin($login,$name,$f_name,$pwd,$h_date){
-    echo var_dump($login,$name,$f_name,$pwd,$h_date);
-    //$sql = "";
-    //$stmt = $this->connect()->prepare($sql);
-    //$stmt->execute([]);
+    //echo var_dump($login,$name,$f_name,$pwd,$h_date);
+    $sql = "";
+    $stmt = $this->connect()->prepare($sql);
+    $stmt->execute([]);
 }
 public function modify_admin($id_admin,$login,$name,$f_name,$pwd,$h_date){
     echo var_dump($id_admin,$login,$name,$f_name,$pwd,$h_date);

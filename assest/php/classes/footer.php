@@ -1,3 +1,4 @@
+<?php //classe contenant le footer?>
 <footer class="my-5 text-muted text-center text-small">
     <p class="mb-1">© 2021 Cesinternship</p>
     <ul class="list-inline">

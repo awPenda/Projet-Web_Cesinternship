@@ -1,7 +1,8 @@
 <?php
 
-//classe compagnye avec la méthode pour ajout dans la bdd en preparant le requète pour éviter les injections
+//classe compagny avec la méthode pour ajout dans la bdd en preparant le requète pour éviter les injections
 class compagny extends dbh{
+    //fonction ajout
 public function add_compagny($activity,$compagny_name,$email,$zip_code,$town,$number_interns){
     //echo var_dump($activity,$compagny_name,$email,$zip_code,$town,$number_interns);
     $sql = "INSERT INTO `compagny`(`id_compagny`, `name_compagny`, `email_compagny`, `activity_compagny`, `nb_cesi_internship`) VALUES ('',?,?,?,?); 
@@ -13,7 +14,7 @@ public function add_compagny($activity,$compagny_name,$email,$zip_code,$town,$nu
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute([$compagny_name,$email,$activity,$number_interns,/**/$compagny_name,/**/$zip_code]);
 }
-
+//fonction modification
 public function modify_compagny($id_compagny,$activity,$compagny_name,$email,$zip_code,$town,$number_interns){
     //echo '<script language="javascript">';
     //echo 'alert("One change have been made")';
@@ -35,6 +36,7 @@ public function modify_compagny($id_compagny,$activity,$compagny_name,$email,$zi
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute([$compagny_name,$email,$activity,$number_interns,$id_compagny,/**/$id_compagny,$zip_code,/**/$id_compagny]);
 }
+//fonction suppression
 public function delete_compagny($id_compagny){
     echo var_dump($id_compagny);
     //$sql = "";

@@ -1,3 +1,15 @@
+<?php
+include "../php/classes/DB_class.php";
+include "../php/classes/connection.php";
+//va empêcher d'autres personnes d'accéder à un contenue sans être connecté
+
+   session_start();
+   if($_SESSION["autoriser"]!="oui"){
+      header("location:http://localhost/index.php"); // si tu es pas co ça te redirige vers ton ecran de signin
+      exit();
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +39,7 @@
 <body class="raw">
 
         <?php
-          include_once 'header.php'
+          include_once '../php/classes/header.php'
         ?>
     
 
@@ -257,8 +269,14 @@
 
         <hr class="mb-4">
         <?php
-          include_once 'footer.php'
+          include_once '../php/classes/footer.php'
         ?>
+
+<?php
+  //détruit les sessions en cours pour la déconnection total
+   //session_destroy();
+   //header("location: http://localhost/index.php");
+?>
 
     </div>
 
