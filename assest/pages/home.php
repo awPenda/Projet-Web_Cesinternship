@@ -272,12 +272,6 @@ include "../php/classes/connection.php";
           include_once '../php/classes/footer.php'
         ?>
 
-<?php
-  //détruit les sessions en cours pour la déconnection total
-   //session_destroy();
-   //header("location: http://localhost/index.php");
-?>
-
     </div>
 
 
