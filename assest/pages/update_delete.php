@@ -55,7 +55,7 @@
 
                         <select id="create_select_type" name="create_select_type" class="form-select form-select-lg mb-3" aria-label="Select type" required="">
                             <option selected="selected" value="">Choose what you want to modify.</option>
-                            <option>Compagny</option>
+                            <option>Company</option>
                             <option>Internship</option>
                             <option>Admin</option>
                             <option>Pilot</option>
@@ -245,11 +245,12 @@
                     //si le bouton encléché cela lance cette fonction
                     if(isset($_POST['btn_valide_student'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_student = $_POST["id_student"];
                         $login = $_POST["user_login"];
                         $name = $_POST["user_name"];
                         $f_name = $_POST["user_firstname"];
-                        $pwd = $_POST["user_password"];
+                        $pwd = md5($_POST["user_password"]);
                         $school = $_POST["student_high_school"];
                         $promotion = $_POST["student_promotion"];
                         $whishlist = $_POST["id_wishlist_student"];
@@ -258,15 +259,16 @@
                         $skill3 = $_POST["name_third_skill_student"];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->modify_student($id_student,$login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3);
+                        $admin->modify_student($id_user,$id_student,$login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3);
                     }
                     //si le bouton encléché cela lance cette fonction
                     if(isset($_POST['btn_delete_student'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_student = $_POST["id_student"];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->delete_student($id_student);
+                        $admin->delete_student($id_user);
                     }
                     ?>
 
@@ -472,23 +474,25 @@
                     //si le bouton encléché cela lance cette fonction
                     if(isset($_POST['btn_valide_pilot'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_pilot = $_POST["id_pilot"];
                         $login = $_POST['user_login'];
                         $name = $_POST['user_name'];
                         $f_name = $_POST['user_firstname'];
-                        $pwd = $_POST['user_password'];
+                        $pwd = md5($_POST['user_password']);
                         $pilot_status = $_POST['pilot_status'];
                         $promotion = $_POST['pilot_promotion'];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->modify_pilot($id_pilot,$login,$name,$f_name,$pwd,$pilot_status,$promotion);
+                        $admin->modify_pilot($id_pilot,$login,$name,$f_name,$pwd,$pilot_status,$promotion,$id_user);
                     }
                     if(isset($_POST['btn_delete_pilot'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_pilot = $_POST["id_pilot"];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->delete_pilot($id_pilot);
+                        $admin->delete_pilot($id_pilot,$id_user);
                     }
                     ?>
 
@@ -517,22 +521,24 @@
                     <?php
                     if(isset($_POST['btn_valide_admin'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_admin = $_POST["id_admin"];
                         $login = $_POST['user_login'];
                         $name = $_POST['user_name'];
                         $f_name = $_POST['user_firstname'];
-                        $pwd = $_POST['user_password'];
+                        $pwd = md5($_POST['user_password']);
                         $h_date = $_POST['hiring_date'];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->modify_admin($id_admin,$login,$name,$f_name,$pwd,$h_date);
+                        $admin->modify_admin($id_admin,$login,$name,$f_name,$pwd,$h_date,$id_user);
                     }
                     if(isset($_POST['btn_delete_admin'])){
                         //recuperation des variables par post
+                        $id_user = $_POST["id_user"];
                         $id_admin = $_POST["id_admin"];
                         //instanciation de la classe pour injeter dans la bdd
                         $admin = new user();
-                        $admin->delete_admin($id_admin);
+                        $admin->delete_admin($id_admin,$id_user);
                         }
                     ?>
 
@@ -542,7 +548,7 @@
                     <div id="compagny_attributes">
                         <div class="flex-column">
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_compagny" name="id_compagny" placeholder="Id Compagny" value="" required="">
+                                <input type="number" class="form-control" id="id_compagny" name="id_compagny" placeholder="Id Company" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid name is required.
                                 </div>
@@ -558,7 +564,7 @@
                                 </select>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="text" class="form-control" id="name_compagny" name="name_compagny" placeholder="Compagny name" value="" required="">
+                                <input type="text" class="form-control" id="name_compagny" name="name_compagny" placeholder="Company name" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid name is required.
                                 </div>
@@ -749,23 +755,13 @@
                             </div>
 
 
-
-                            <div class="row" id="div_date_internship">
-                                <div class="col-md-6 col-sm-6 mb-3">
-                                    <label class="text-muted" for="period_internship_beginning">Beginning</label>
-                                    <input type="date" class="form-control" id="period_internship_beginning" name="period_internship_beginning" value="" required="">
-                                    <div class="invalid-feedback">
-                                        A valid date is required.
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 mb-3">
-                                    <label class="text-muted" for="period_internship_ending">Ending</label>
-                                    <input type="date" class="form-control" id="period_internship_ending" name="period_internship_ending" value="" required="">
-                                    <div class="invalid-feedback">
-                                        A valid date is required.
-                                    </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" class="form-control" placeholder="Duration interneship (in weeks)" step="1" min="1" id="duration_internship" name="duration_internship">
+                                <div class="invalid-feedback">
+                                    A valid pay is required.
                                 </div>
                             </div>
+
                             <div class="col-md-12 mb-3">
                                 <input type="number" class="form-control" placeholder="Base pay" step="0.01" min="546.00" id="base_pay_internship" name="base_pay_internship">
                                 <div class="invalid-feedback">
@@ -773,7 +769,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
-                                <input type="number" class="form-control" id="id_compagny_internship" name="id_compagny_internship" placeholder="Id of your compagny" value="" required="">
+                                <input type="number" class="form-control" id="id_compagny_internship" name="id_compagny_internship" placeholder="Id of your company" value="" required="">
                                 <div class="invalid-feedback">
                                     A valid number is required.
                                 </div>
@@ -811,15 +807,14 @@
                         $skill1 = $_POST["name_first_skill_internship"];
                         $skill2 = $_POST["name_second_skill_internship"];
                         $skill3 = $_POST["name_third_skill_internship"];
-                        $beginning = $_POST["period_internship_beginning"];
-                        $ending = $_POST["period_internship_ending"];
+                        $duration = $_POST["duration_internship"];
                         $pay = $_POST["base_pay_internship"];
                         $id_compagny = $_POST["id_compagny_internship"];
                         $publication = $_POST["date_publication_internship"];
                         $description = $_POST["description_internship"];
                         //instantiation pour ajouter a la bdd
                         $internship = new internship();
-                        $internship->modify_internship($id_internship,$available,$level,$number,$skill1,$skill2,$skill3,$beginning,$ending,$pay,$id_compagny,$publication,$description);
+                        $internship->modify_internship($id_internship,$available,$level,$number,$skill1,$skill2,$skill3,$duration,$pay,$id_compagny,$publication,$description);
                     }
                     if(isset($_POST['btn_delete_internship'])){
                         //récupération des valeurs via la méthode POST
@@ -842,7 +837,7 @@
         <hr class="mb-4">
 
         <?php
-          include_once '../php/classes/footer.php'**
+          include_once '../php/classes/footer.php'
         ?>
 
       </div>

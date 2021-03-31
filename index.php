@@ -81,7 +81,7 @@ include "./assest/php/classes/connection.php";
       if($type == "Admin"){
         $mode = 1;
         $login = $_POST['user_name'];
-        $pass = $_POST['input_password'];
+        $pass = md5($_POST['input_password']);
         //echo $mode;
         //instantiation
         $connection = new connection();
@@ -90,7 +90,7 @@ include "./assest/php/classes/connection.php";
       if($type == "Pilot"){
         $mode = 2;
         $login = $_POST['user_name'];
-        $pass = $_POST['input_password'];
+        $pass = md5($_POST['input_password']);
         //echo $mode;
         //instantiation
         $connection = new connection();
@@ -99,7 +99,7 @@ include "./assest/php/classes/connection.php";
       if($type == "Delegate"){
         $mode = 3;
         $login = $_POST['user_name'];
-        $pass = $_POST['input_password'];
+        $pass = md5($_POST['input_password']);
         //echo $mode;
         //instantiation
         $connection = new connection();
@@ -108,7 +108,7 @@ include "./assest/php/classes/connection.php";
       if($type == "Student"){
         $mode = 4;
         $login = $_POST['user_name'];
-        $pass = $_POST['input_password'];
+        $pass = md5($_POST['input_password']);
         //echo $mode;
         //instantiation
         $connection = new connection();
