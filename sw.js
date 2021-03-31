@@ -20,9 +20,9 @@ const urlsToCache = [
     './',
     './index.php',
 
-    //  './assets/pages/create.php',
-    //  './assets/pages/home.php',
-    //  './assets/pages/update_delete.php',
+      './assets/pages/create.php',
+      './assets/pages/home.php',
+      './assets/pages/update_delete.php',
 
      './assets/php/classes/compagny.php',
      './assets/php/classes/connection.php',

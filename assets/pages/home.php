@@ -9,7 +9,7 @@ include "../php/classes/internship.php";
 
    session_start();
    if($_SESSION["autoriser"]!="oui"){
-      header("location:http://localhost/index.php"); // si tu es pas co ça te redirige vers ton ecran de signin
+      header("location:https://www.cesinternship.local/index.php"); // si tu es pas co ça te redirige vers ton ecran de signin
       exit();
    }
 ?>

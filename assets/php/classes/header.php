@@ -21,18 +21,18 @@
                     
         <?php
             if(isset($_POST['btn_home'])){
-                header("location: http://localhost/assets/pages/home.php");
+                header("location: https://www.cesinternship.local/assets/pages/home.php");
             }
             if(isset($_POST['create_button'])){
-                header("location: http://localhost/assets/pages/create.php");
+                header("location: https://www.cesinternship.local/assets/pages/create.php");
             }
             if(isset($_POST['modify_button'])){
-                header("location: http://localhost/assets/pages/update_delete.php");
+                header("location: https://www.cesinternship.local/assets/pages/update_delete.php");
             }
             if(isset($_POST['button_sign_out'])){
             //détruit les sessions en cours pour la déconnection total
             session_destroy();
-            header("location: http://localhost/index.php");
+            header("location: https://www.cesinternship.local/index.php");
             }
         ?>
 

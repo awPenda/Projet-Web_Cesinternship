@@ -7,7 +7,7 @@ public function conn_admin($login,$pass){
       $tab=$sql->fetchAll();
       if(count($tab)>0){ //si correlation avec la bdd
          $_SESSION["autoriser"]="oui"; // on aurotise la co avec le $_SERVER qui se propage sur toutes les pages
-         header("location:http://localhost/assets/pages/home.php");// on redirige vers la page d'acceuil.
+         header("location:https://www.cesinternship.local/assets/pages/home.php");// on redirige vers la page d'acceuil.
       }
       else
          $erreur="Bad login or password!"; // on prompte un message
@@ -22,7 +22,7 @@ public function conn_pilot($login,$pass){
      $tab=$sql->fetchAll();
      if(count($tab)>0){ //si correlation avec la bdd
         $_SESSION["autoriser"]="oui"; // on aurotise la co avec le $_SERVER qui se propage sur toutes les pages
-        header("location:http://localhost/assets/pages/home.php");// on redirige vers la page d'acceuil.
+        header("location:https://www.cesinternship.local/assets/pages/home.php");// on redirige vers la page d'acceuil.
      }
      else
         $erreur="Bad login or password!"; // on prompte un message
@@ -37,7 +37,7 @@ public function conn_delegate($login,$pass){
      $tab=$sql->fetchAll();
      if(count($tab)>0){ //si correlation avec la bdd
         $_SESSION["autoriser"]="oui"; // on aurotise la co avec le $_SERVER qui se propage sur toutes les pages
-        header("location:http://localhost/assets/pages/home.php");// on redirige vers la page d'acceuil.
+        header("location:https://www.cesinternship.local/assets/pages/home.php");// on redirige vers la page d'acceuil.
      }
      else
         $erreur="Bad login or password!"; // on prompte un message
@@ -52,7 +52,7 @@ public function conn_user($login,$pass){
      $tab=$sql->fetchAll();
      if(count($tab)>0){ //si correlation avec la bdd
         $_SESSION["autoriser"]="oui"; // on aurotise la co avec le $_SERVER qui se propage sur toutes les pages
-        header("location:http://localhost/assets/pages/home.php");// on redirige vers la page d'acceuil.
+        header("location:https://www.cesinternship.local/assets/pages/home.php");// on redirige vers la page d'acceuil.
      }
      else
         $erreur="Bad login or password!"; // on prompte un message
