@@ -15,8 +15,8 @@ public function add_delegate($login,$name,$f_name,$pwd,$school,$promotion,$whish
     SELECT id_user,id_student,?,?,user_login,user_name,user_first_name,user_password,student_high_school,id_wishlist 
     FROM student 
     WHERE `user_login` =?  LIMIT 1;";*/
-    $stmt = $this->connect()->prepare($sql);
-    $stmt->execute([$login,$name,$f_name,$pwd,$rand,$school,$name,$pwd,$rand,$right,$login]);
+    //$stmt = $this->connect()->prepare($sql);
+    //$stmt->execute([$login,$name,$f_name,$pwd,$rand,$school,$name,$pwd,$rand,$right,$login]);
 }
 public function modify_delegate($id_delegate,$login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3,$right){
     echo var_dump($id_delegate,$login,$name,$f_name,$pwd,$school,$promotion,$whishlist,$skill1,$skill2,$skill3,$right);
