@@ -1,15 +1,15 @@
-<?php
-include "./assets/php/classes/DB_class.php";
-include "./assets/php/classes/connection.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!--Métadonnée de la page, encodage, et adaptabilité en fonction des écrans-->
-     <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <meta name="description" content="Cesinternship Sign-in page">
      <meta name="author" content="Amélie WILLEMS">
+     <meta name="theme-color" content="#0cb8c4"/>
+     
+      <!-- insertion du manifest json -->
+     <link rel="manifest" href="manifest.json">
+
      <!-- intégration de la feuille CSS de bootstrap -->
      <link rel="stylesheet" href="./assets/vendors/bootstrap/bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.min.css">
      <!-- Ajout de la librairie pour les icones -->
@@ -23,14 +23,20 @@ include "./assets/php/classes/connection.php";
 
      <!-- Lien page de style -->
      <link rel="stylesheet" href="./assets/style/style.css">
+     
      <!-- Titre de la page-->
      <title>Connexion</title>
 </head>
 
+<?php
+include "./assets/php/classes/DB_class.php";
+include "./assets/php/classes/connection.php";
+?>
+
 <body class="raw">
   
     <nav class="navbar navbar-dark bg-dark">
-        <h1 id="Title_cesinternship"><img src="./assets/pictures/Cesinternship.png" alt="Cesinternship" width="250"></h1>
+        <h1 id="Title_cesinternship"><img src="./assets/pictures/Cesinternship.png" alt="Cesinternship" width="250" height="43"></h1>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,7 +51,7 @@ include "./assets/php/classes/connection.php";
 
     <div id="main_div" class="text-center">
         <form class="form-signin" method="POST">
-            <img class="mb-4" src="./assets/pictures/LOGO.png" alt="LOGO" style="width:50%">
+            <img class="mb-4" src="./assets/pictures/LOGO.png" alt="LOGO" style="width:150px; height:150px">
             
             <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
   
@@ -62,7 +68,7 @@ include "./assets/php/classes/connection.php";
             <!-- <label for="input_password" class="sr-only">Password</label> -->
             <input type="password" id="input_password" name="input_password" class="form-control" placeholder="Password" required="" autocomplete>
             
-            <button id="sign_in_btn" name="sign_in_btn" class="btn btn-lg btn-block" type="submit">Sign in</button>
+            <button id="sign_in_btn" name="sign_in_btn" class="btn btn-lg btn-block btn-dark" type="submit">Sign in</button>
         </form>
     </div>
 
@@ -117,7 +123,7 @@ include "./assets/php/classes/connection.php";
    }
 ?>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
+    <footer class="my-5 pt-5 text-center text-small">
         <p class="mb-1">© 2021 Cesinternship</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>

@@ -15,6 +15,15 @@ self.addEventListener('activate', event => {
     console.log('Service worker is activated !');
 });
 
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => {
+                return response || fetch(event.request);
+            })
+    );
+});
+
 const CACHE_NAME = 'Csintship_cache_v1';
 const urlsToCache = [
     './',
@@ -39,6 +48,11 @@ const urlsToCache = [
      './assets/pictures/cesinternshipLOGO.png',
      './assets/pictures/CesintershipLOGO.png',
      './assets/pictures/LOGO.png',
+     
+     './assets/pictures/android-chrome-192x192.png',
+     './assets/pictures/android-chrome-512x512.png',
+     './assets/pictures/apple-touch-icon-180x180-precomposed.png',
+     './assets/pictures/mstile-150x150.png',
 
      './assets/script/create.js',
      './assets/script/home.js',

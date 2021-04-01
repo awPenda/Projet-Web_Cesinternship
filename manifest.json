@@ -1,0 +1,26 @@
+{
+    "name" : "Cesintership",
+    "short_name" : "Cesintership",
+    "start_url" : "./index.php",
+    "background_color" : "#d8dddd",
+    "theme_color": "#0cb8c4",
+    "display": "standalone",
+    "orientation" : "portrait-primary",
+    "icons" : [{
+      "src": "./assets/pictures/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "./assets/pictures/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "./assets/pictures/mstile-150x150.png",
+      "sizes": "270x270",
+      "type": "image/png"
+    },{
+        "src": "./assets/pictures/apple-touch-icon-180x180-precomposed.png",
+        "sizes": "180x180",
+        "type": "image/png"
+    }]
+}
