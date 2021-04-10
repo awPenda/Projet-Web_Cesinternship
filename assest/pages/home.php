@@ -7,11 +7,13 @@ include "../php/classes/internship.php";
 
 //va empêcher d'autres personnes d'accéder à un contenue sans être connecté
 
+/*
    session_start();
    if($_SESSION["autoriser"]!="oui"){
-      header("location:https://www.cesinternship.local/index.php"); // si tu es pas co ça te redirige vers ton ecran de signin
+      header("location:http://localhost/index.php"); // si tu es pas co ça te redirige vers ton ecran de signin
       exit();
    }
+   */
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +47,25 @@ include "../php/classes/internship.php";
         <?php
           include_once '../php/classes/header.php'
         ?>
+
+
+          <!-- try to include données de session, but that not work 
+
+            <p class="text-center" style="color: black;">
+                <?php /*
+                include_once '../php/classes/connection.php';
+
+                echo 'Hello ' .$_SESSION["name"]. ' Welcome !';
+
+                echo $_SESSION["autoriser"];
+
+                echo $_SESSION["autoriser"];
+
+                echo $_SESSION["whislist"];
+                */
+                ?>
+            </p>
+          -->
     
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light rounded justify-content-center">
@@ -210,7 +231,8 @@ include "../php/classes/internship.php";
 
         <hr class="mb-4">
         <?php
-          include_once '../php/classes/footer.php'
+          include_once '../php/classes/wishlist.php';
+          include_once '../php/classes/footer.php';
         ?>
 
     </div>

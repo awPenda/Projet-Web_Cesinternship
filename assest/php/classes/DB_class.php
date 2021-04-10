@@ -4,8 +4,8 @@
 class dbh {
     private $host = "localhost";
     private $username = "root";
-    private $password = "cesi";
-    private $db_name = "web_project_database_final";
+    private $password = "";
+    private $db_name = "web_project_db";
 
     protected function connect(){
         $dsn ='mysql:host='.$this->host.'; dbname='.$this->db_name;

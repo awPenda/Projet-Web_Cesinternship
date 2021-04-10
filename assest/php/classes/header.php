@@ -20,25 +20,29 @@
         </div>
                     
         <?php
+
+            
+
             if(isset($_POST['btn_home'])){
-                header("location: https://www.cesinternship.local/assets/pages/home.php");
+                header("location: https://www.cesinternship.local/assest/pages/home.php");
             }
             if(isset($_POST['create_button'])){
-                header("location: https://www.cesinternship.local/assets/pages/create.php");
+                header("location: https://www.cesinternship.local/assest/pages/create.php");
             }
             if(isset($_POST['modify_button'])){
-                header("location: https://www.cesinternship.local/assets/pages/update_delete.php");
+                header("location: https://www.cesinternship.local/assest/pages/update_delete.php");
             }
             if(isset($_POST['button_sign_out'])){
             //détruit les sessions en cours pour la déconnection total
             session_destroy();
-            header("location: https://www.cesinternship.local/index.php");
+            header("location:https://www.cesinternship.local/index.php");
             }
         ?>
 
             
             
         <div class="navbar-collapse collapse" id="navbarsExample01" >
+                      
             <p class="text-center" style="color: white;">
                 Find your intership with Cesinternship !
             </p>
