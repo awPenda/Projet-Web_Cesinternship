@@ -52,7 +52,7 @@ public function conn_user($login,$pass){
      $tab=$sql->fetchAll();
      if(count($tab)>0){ //si correlation avec la bdd
         $_SESSION["autoriser"]="oui"; // on aurotise la co avec le $_SERVER qui se propage sur toutes les pages
-        $_SESSION["name"]= $login.toString() ;//on récupére et on stocke les données de l'utilisateur dans les données de Session
+        $_SESSION["name"]= $login;//.toString() ;//on récupére et on stocke les données de l'utilisateur dans les données de Session
         $sqlrequest=$this->connect()->prepare("(SELECT `id_wishlist` FROM `student` WHERE student.user_login = ? limit 1)");
         $_SESSION["whislist"]= $sql->execute($login);
         #$_SESSION["whislist"]= $sqlrequest->execute("(SELECT `id_wishlist` FROM `student` WHERE student.user_login = hantonlink limit 1)");

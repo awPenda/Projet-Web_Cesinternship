@@ -31,17 +31,15 @@ class internship extends dbh{
 
 
     public function add_internship_to_wishlist($id_wishlist,$id_internship){
-        $sql = "INSERT INTO `part_of`(`id_wishlist`, `id_internship`) VALUES ('?','?')";
+        $sql = "INSERT INTO `part_of`(`id_wishlist`, `id_internship`) VALUES (" . $id_wishlist . ", ".$id_internship.") ";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$id_wishlist,$id_internship]);
-
+        $stmt->execute();
         echo 'internship correctly added to the wishlist';
     }
     public function delete_internship_from_wishlist($id_wishlist,$id_internship){
-        
-        $sql = "DELETE FROM `part_of` WHERE id_internship LIKE ? AND id_wishlist LIKE ?";
+        $sql = "DELETE FROM `part_of` WHERE id_internship LIKE " .$id_internship. " AND id_wishlist LIKE " . $id_wishlist  ;
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$id_wishlist,$id_internship]);
+        $stmt->execute();
         echo 'internship correctly deleted to the wishlist';
     }
 
